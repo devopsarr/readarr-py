@@ -1,0 +1,128 @@
+# readarr.QueueActionApi
+
+All URIs are relative to *http://localhost*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**create_queue_grab_bulk**](QueueActionApi.md#create_queue_grab_bulk) | **POST** /api/v1/queue/grab/bulk | 
+[**create_queue_grab_by_id**](QueueActionApi.md#create_queue_grab_by_id) | **POST** /api/v1/queue/grab/{id} | 
+
+
+# **create_queue_grab_bulk**
+> create_queue_grab_bulk(queue_bulk_resource=queue_bulk_resource)
+
+
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import os
+import readarr
+from readarr.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = readarr.Configuration(
+    host = "http://localhost"
+)
+
+
+# Enter a context with an instance of the API client
+with readarr.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = readarr.QueueActionApi(api_client)
+    queue_bulk_resource = readarr.QueueBulkResource() # QueueBulkResource |  (optional)
+
+    try:
+        api_instance.create_queue_grab_bulk(queue_bulk_resource=queue_bulk_resource)
+    except Exception as e:
+        print("Exception when calling QueueActionApi->create_queue_grab_bulk: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **queue_bulk_resource** | [**QueueBulkResource**](QueueBulkResource.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/*+json
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_queue_grab_by_id**
+> create_queue_grab_by_id(id)
+
+
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import os
+import readarr
+from readarr.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = readarr.Configuration(
+    host = "http://localhost"
+)
+
+
+# Enter a context with an instance of the API client
+with readarr.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = readarr.QueueActionApi(api_client)
+    id = 56 # int | 
+
+    try:
+        api_instance.create_queue_grab_by_id(id)
+    except Exception as e:
+        print("Exception when calling QueueActionApi->create_queue_grab_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+

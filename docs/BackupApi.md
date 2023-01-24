@@ -1,0 +1,242 @@
+# readarr.BackupApi
+
+All URIs are relative to *http://localhost*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**create_system_backup_restore_by_id**](BackupApi.md#create_system_backup_restore_by_id) | **POST** /api/v1/system/backup/restore/{id} | 
+[**create_system_backup_restore_upload**](BackupApi.md#create_system_backup_restore_upload) | **POST** /api/v1/system/backup/restore/upload | 
+[**delete_system_backup**](BackupApi.md#delete_system_backup) | **DELETE** /api/v1/system/backup/{id} | 
+[**list_system_backup**](BackupApi.md#list_system_backup) | **GET** /api/v1/system/backup | 
+
+
+# **create_system_backup_restore_by_id**
+> create_system_backup_restore_by_id(id)
+
+
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import os
+import readarr
+from readarr.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = readarr.Configuration(
+    host = "http://localhost"
+)
+
+
+# Enter a context with an instance of the API client
+with readarr.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = readarr.BackupApi(api_client)
+    id = 56 # int | 
+
+    try:
+        api_instance.create_system_backup_restore_by_id(id)
+    except Exception as e:
+        print("Exception when calling BackupApi->create_system_backup_restore_by_id: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_system_backup_restore_upload**
+> create_system_backup_restore_upload()
+
+
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import os
+import readarr
+from readarr.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = readarr.Configuration(
+    host = "http://localhost"
+)
+
+
+# Enter a context with an instance of the API client
+with readarr.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = readarr.BackupApi(api_client)
+
+    try:
+        api_instance.create_system_backup_restore_upload()
+    except Exception as e:
+        print("Exception when calling BackupApi->create_system_backup_restore_upload: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_system_backup**
+> delete_system_backup(id)
+
+
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import os
+import readarr
+from readarr.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = readarr.Configuration(
+    host = "http://localhost"
+)
+
+
+# Enter a context with an instance of the API client
+with readarr.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = readarr.BackupApi(api_client)
+    id = 56 # int | 
+
+    try:
+        api_instance.delete_system_backup(id)
+    except Exception as e:
+        print("Exception when calling BackupApi->delete_system_backup: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **list_system_backup**
+> List[BackupResource] list_system_backup()
+
+
+
+### Example
+
+```python
+from __future__ import print_function
+import time
+import os
+import readarr
+from readarr.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = readarr.Configuration(
+    host = "http://localhost"
+)
+
+
+# Enter a context with an instance of the API client
+with readarr.ApiClient() as api_client:
+    # Create an instance of the API class
+    api_instance = readarr.BackupApi(api_client)
+
+    try:
+        api_response = api_instance.list_system_backup()
+        print("The response of BackupApi->list_system_backup:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling BackupApi->list_system_backup: %s\n" % e)
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**List[BackupResource]**](BackupResource.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
