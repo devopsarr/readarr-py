@@ -391,7 +391,7 @@ class Configuration(object):
                "Python Version: {pyversion}\n"\
                "Version of the API: 0.1.0\n"\
                 // x-release-please-start-version
-               "SDK Package Version: 0.1.0".\
+               "SDK Package Version: 0.2.0".\
                 // x-release-please-end
                format(env=sys.platform, pyversion=sys.version)
 
