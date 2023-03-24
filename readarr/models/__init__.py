@@ -73,7 +73,6 @@ from readarr.models.history_event_type import HistoryEventType
 from readarr.models.history_resource import HistoryResource
 from readarr.models.history_resource_paging_resource import HistoryResourcePagingResource
 from readarr.models.host_config_resource import HostConfigResource
-from readarr.models.http_uri import HttpUri
 from readarr.models.import_list_exclusion_resource import ImportListExclusionResource
 from readarr.models.import_list_monitor_type import ImportListMonitorType
 from readarr.models.import_list_resource import ImportListResource
@@ -146,7 +145,6 @@ from readarr.models.tag_details_resource import TagDetailsResource
 from readarr.models.tag_difference import TagDifference
 from readarr.models.tag_resource import TagResource
 from readarr.models.task_resource import TaskResource
-from readarr.models.time_span import TimeSpan
 from readarr.models.tracked_download_state import TrackedDownloadState
 from readarr.models.tracked_download_status import TrackedDownloadStatus
 from readarr.models.tracked_download_status_message import TrackedDownloadStatusMessage
@@ -154,6 +152,5 @@ from readarr.models.ui_config_resource import UiConfigResource
 from readarr.models.update_changes import UpdateChanges
 from readarr.models.update_mechanism import UpdateMechanism
 from readarr.models.update_resource import UpdateResource
-from readarr.models.version import Version
 from readarr.models.write_audio_tags_type import WriteAudioTagsType
 from readarr.models.write_book_tags_type import WriteBookTagsType

@@ -30,7 +30,7 @@ class ImportListMonitorType(str, Enum):
     allowed enum values
     """
 
-    var_NONE = 'none'
-    SPECIFIC_BOOK = 'specificBook'
-    ENTIRE_AUTHOR = 'entireAuthor'
+    NONE = 'none'
+    SPECIFICBOOK = 'specificBook'
+    ENTIREAUTHOR = 'entireAuthor'
 

@@ -17,7 +17,7 @@ import re  # noqa: F401
 from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
-from pydantic import StrictBool, StrictInt, StrictStr
+from pydantic import StrictBool, StrictInt, StrictStr, conlist
 
 from typing import List, Optional
 
@@ -468,7 +468,7 @@ class BookApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def list_book(self, author_id : Optional[StrictInt] = None, book_ids : Optional[List[StrictInt]] = None, title_slug : Optional[StrictStr] = None, include_all_author_books : Optional[StrictBool] = None, **kwargs) -> List[BookResource]:  # noqa: E501
+    def list_book(self, author_id : Optional[StrictInt] = None, book_ids : Optional[conlist(StrictInt)] = None, title_slug : Optional[StrictStr] = None, include_all_author_books : Optional[StrictBool] = None, **kwargs) -> List[BookResource]:  # noqa: E501
         """list_book  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -504,7 +504,7 @@ class BookApi(object):
         return self.list_book_with_http_info(author_id, book_ids, title_slug, include_all_author_books, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def list_book_with_http_info(self, author_id : Optional[StrictInt] = None, book_ids : Optional[List[StrictInt]] = None, title_slug : Optional[StrictStr] = None, include_all_author_books : Optional[StrictBool] = None, **kwargs):  # noqa: E501
+    def list_book_with_http_info(self, author_id : Optional[StrictInt] = None, book_ids : Optional[conlist(StrictInt)] = None, title_slug : Optional[StrictStr] = None, include_all_author_books : Optional[StrictBool] = None, **kwargs):  # noqa: E501
         """list_book  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
