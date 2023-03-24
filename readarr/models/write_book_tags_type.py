@@ -30,7 +30,7 @@ class WriteBookTagsType(str, Enum):
     allowed enum values
     """
 
-    NEW_FILES = 'newFiles'
-    ALL_FILES = 'allFiles'
+    NEWFILES = 'newFiles'
+    ALLFILES = 'allFiles'
     SYNC = 'sync'
 
