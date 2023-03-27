@@ -18,7 +18,7 @@ import json
 
 
 from typing import List, Optional
-from pydantic import BaseModel, validator
+from pydantic import BaseModel
 from readarr.models.iso_country import IsoCountry
 from readarr.models.media_info_model import MediaInfoModel
 from readarr.models.quality_model import QualityModel
@@ -61,12 +61,6 @@ class ParsedTrackInfo(BaseModel):
     release_group: Optional[str]
     release_hash: Optional[str]
     __properties = ["title", "cleanTitle", "authors", "authorTitle", "bookTitle", "seriesTitle", "seriesIndex", "isbn", "asin", "goodreadsId", "authorMBId", "bookMBId", "releaseMBId", "recordingMBId", "trackMBId", "discNumber", "discCount", "country", "year", "publisher", "label", "source", "catalogNumber", "disambiguation", "duration", "quality", "mediaInfo", "trackNumbers", "language", "releaseGroup", "releaseHash"]
-
-    @validator('duration')
-    def duration_validate_regular_expression(cls, v):
-        if not re.match(r"\d{2}:\d{2}:\d{2}", v):
-            raise ValueError(r"must validate the regular expression /\d{2}:\d{2}:\d{2}/")
-        return v
 
     class Config:
         allow_population_by_field_name = True
