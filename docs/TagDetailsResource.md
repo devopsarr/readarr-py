@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **import_list_ids** | **List[int]** |  | [optional] 
 **notification_ids** | **List[int]** |  | [optional] 
 **restriction_ids** | **List[int]** |  | [optional] 
+**indexer_ids** | **List[int]** |  | [optional] 
 **author_ids** | **List[int]** |  | [optional] 
 
 ## Example

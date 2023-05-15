@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **default_metadata_profile_id** | **int** |  | [optional] 
 **default_quality_profile_id** | **int** |  | [optional] 
 **default_monitor_option** | [**MonitorTypes**](MonitorTypes.md) |  | [optional] 
+**default_new_item_monitor_option** | [**NewItemMonitorTypes**](NewItemMonitorTypes.md) |  | [optional] 
 **default_tags** | **List[int]** |  | [optional] 
 **is_calibre_library** | **bool** |  | [optional] 
 **host** | **str** |  | [optional] 

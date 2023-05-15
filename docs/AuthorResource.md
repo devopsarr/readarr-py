@@ -23,6 +23,7 @@ Name | Type | Description | Notes
 **quality_profile_id** | **int** |  | [optional] 
 **metadata_profile_id** | **int** |  | [optional] 
 **monitored** | **bool** |  | [optional] 
+**monitor_new_items** | [**NewItemMonitorTypes**](NewItemMonitorTypes.md) |  | [optional] 
 **root_folder_path** | **str** |  | [optional] 
 **genres** | **List[str]** |  | [optional] 
 **clean_name** | **str** |  | [optional] 

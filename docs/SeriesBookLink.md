@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
 **position** | **str** |  | [optional] 
+**series_position** | **int** |  | [optional] 
 **series_id** | **int** |  | [optional] 
 **book_id** | **int** |  | [optional] 
 **is_primary** | **bool** |  | [optional] 

@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **author_ids** | **List[int]** |  | [optional] 
 **monitored** | **bool** |  | [optional] 
+**monitor_new_items** | [**NewItemMonitorTypes**](NewItemMonitorTypes.md) |  | [optional] 
 **quality_profile_id** | **int** |  | [optional] 
 **metadata_profile_id** | **int** |  | [optional] 
 **root_folder_path** | **str** |  | [optional] 

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **author** | [**AuthorResource**](AuthorResource.md) |  | [optional] 
 **book** | [**BookResource**](BookResource.md) |  | [optional] 
 **quality** | [**QualityModel**](QualityModel.md) |  | [optional] 
+**custom_formats** | [**List[CustomFormatResource]**](CustomFormatResource.md) |  | [optional] 
 **size** | **float** |  | [optional] 
 **title** | **str** |  | [optional] 
 **sizeleft** | **float** |  | [optional] 

@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **authors** | [**List[BookshelfAuthorResource]**](BookshelfAuthorResource.md) |  | [optional] 
 **monitoring_options** | [**MonitoringOptions**](MonitoringOptions.md) |  | [optional] 
+**monitor_new_items** | [**NewItemMonitorTypes**](NewItemMonitorTypes.md) |  | [optional] 
 
 ## Example
 

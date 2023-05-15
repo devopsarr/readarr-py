@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **name** | **str** |  | [optional] 
 **path** | **str** |  | [optional] 
 **type** | [**BackupType**](BackupType.md) |  | [optional] 
+**size** | **int** |  | [optional] 
 **time** | **datetime** |  | [optional] 
 
 ## Example

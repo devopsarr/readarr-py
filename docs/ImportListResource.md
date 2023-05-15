@@ -16,12 +16,15 @@ Name | Type | Description | Notes
 **presets** | [**List[ImportListResource]**](ImportListResource.md) |  | [optional] 
 **enable_automatic_add** | **bool** |  | [optional] 
 **should_monitor** | [**ImportListMonitorType**](ImportListMonitorType.md) |  | [optional] 
+**should_monitor_existing** | **bool** |  | [optional] 
 **should_search** | **bool** |  | [optional] 
 **root_folder_path** | **str** |  | [optional] 
+**monitor_new_items** | [**NewItemMonitorTypes**](NewItemMonitorTypes.md) |  | [optional] 
 **quality_profile_id** | **int** |  | [optional] 
 **metadata_profile_id** | **int** |  | [optional] 
 **list_type** | [**ImportListType**](ImportListType.md) |  | [optional] 
 **list_order** | **int** |  | [optional] 
+**min_refresh_interval** | **str** |  | [optional] 
 
 ## Example
 
