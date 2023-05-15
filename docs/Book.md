@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **release_date** | **datetime** |  | [optional] 
 **links** | [**List[Links]**](Links.md) |  | [optional] 
 **genres** | **List[str]** |  | [optional] 
+**related_books** | **List[int]** |  | [optional] 
 **ratings** | [**Ratings**](Ratings.md) |  | [optional] 
 **clean_title** | **str** |  | [optional] 
 **monitored** | **bool** |  | [optional] 

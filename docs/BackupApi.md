@@ -1,6 +1,6 @@
 # readarr.BackupApi
 
-All URIs are relative to *http://localhost*
+All URIs are relative to *http://localhost:8787*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -17,6 +17,7 @@ Method | HTTP request | Description
 
 ### Example
 
+* Api Key Authentication (apikey):
 ```python
 from __future__ import print_function
 import time
@@ -24,15 +25,74 @@ import os
 import readarr
 from readarr.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to http://localhost:8787
 # See configuration.py for a list of all supported configuration parameters.
 configuration = readarr.Configuration(
-    host = "http://localhost"
+    host = "http://localhost:8787"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: apikey
+configuration.api_key['apikey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apikey'] = 'Bearer'
+
+# Configure API key authorization: X-Api-Key
+configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with readarr.ApiClient() as api_client:
+with readarr.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = readarr.BackupApi(api_client)
+    id = 56 # int | 
+
+    try:
+        api_instance.create_system_backup_restore_by_id(id)
+    except Exception as e:
+        print("Exception when calling BackupApi->create_system_backup_restore_by_id: %s\n" % e)
+```
+
+* Api Key Authentication (X-Api-Key):
+```python
+from __future__ import print_function
+import time
+import os
+import readarr
+from readarr.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost:8787
+# See configuration.py for a list of all supported configuration parameters.
+configuration = readarr.Configuration(
+    host = "http://localhost:8787"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: apikey
+configuration.api_key['apikey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apikey'] = 'Bearer'
+
+# Configure API key authorization: X-Api-Key
+configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with readarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = readarr.BackupApi(api_client)
     id = 56 # int | 
@@ -55,7 +115,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[apikey](../README.md#apikey), [X-Api-Key](../README.md#X-Api-Key)
 
 ### HTTP request headers
 
@@ -76,6 +136,7 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (apikey):
 ```python
 from __future__ import print_function
 import time
@@ -83,15 +144,73 @@ import os
 import readarr
 from readarr.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to http://localhost:8787
 # See configuration.py for a list of all supported configuration parameters.
 configuration = readarr.Configuration(
-    host = "http://localhost"
+    host = "http://localhost:8787"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: apikey
+configuration.api_key['apikey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apikey'] = 'Bearer'
+
+# Configure API key authorization: X-Api-Key
+configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with readarr.ApiClient() as api_client:
+with readarr.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = readarr.BackupApi(api_client)
+
+    try:
+        api_instance.create_system_backup_restore_upload()
+    except Exception as e:
+        print("Exception when calling BackupApi->create_system_backup_restore_upload: %s\n" % e)
+```
+
+* Api Key Authentication (X-Api-Key):
+```python
+from __future__ import print_function
+import time
+import os
+import readarr
+from readarr.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost:8787
+# See configuration.py for a list of all supported configuration parameters.
+configuration = readarr.Configuration(
+    host = "http://localhost:8787"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: apikey
+configuration.api_key['apikey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apikey'] = 'Bearer'
+
+# Configure API key authorization: X-Api-Key
+configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with readarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = readarr.BackupApi(api_client)
 
@@ -110,7 +229,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[apikey](../README.md#apikey), [X-Api-Key](../README.md#X-Api-Key)
 
 ### HTTP request headers
 
@@ -131,6 +250,7 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (apikey):
 ```python
 from __future__ import print_function
 import time
@@ -138,15 +258,74 @@ import os
 import readarr
 from readarr.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to http://localhost:8787
 # See configuration.py for a list of all supported configuration parameters.
 configuration = readarr.Configuration(
-    host = "http://localhost"
+    host = "http://localhost:8787"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: apikey
+configuration.api_key['apikey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apikey'] = 'Bearer'
+
+# Configure API key authorization: X-Api-Key
+configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with readarr.ApiClient() as api_client:
+with readarr.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = readarr.BackupApi(api_client)
+    id = 56 # int | 
+
+    try:
+        api_instance.delete_system_backup(id)
+    except Exception as e:
+        print("Exception when calling BackupApi->delete_system_backup: %s\n" % e)
+```
+
+* Api Key Authentication (X-Api-Key):
+```python
+from __future__ import print_function
+import time
+import os
+import readarr
+from readarr.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost:8787
+# See configuration.py for a list of all supported configuration parameters.
+configuration = readarr.Configuration(
+    host = "http://localhost:8787"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: apikey
+configuration.api_key['apikey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apikey'] = 'Bearer'
+
+# Configure API key authorization: X-Api-Key
+configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with readarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = readarr.BackupApi(api_client)
     id = 56 # int | 
@@ -169,7 +348,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[apikey](../README.md#apikey), [X-Api-Key](../README.md#X-Api-Key)
 
 ### HTTP request headers
 
@@ -190,6 +369,7 @@ No authorization required
 
 ### Example
 
+* Api Key Authentication (apikey):
 ```python
 from __future__ import print_function
 import time
@@ -197,15 +377,75 @@ import os
 import readarr
 from readarr.rest import ApiException
 from pprint import pprint
-# Defining the host is optional and defaults to http://localhost
+# Defining the host is optional and defaults to http://localhost:8787
 # See configuration.py for a list of all supported configuration parameters.
 configuration = readarr.Configuration(
-    host = "http://localhost"
+    host = "http://localhost:8787"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: apikey
+configuration.api_key['apikey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apikey'] = 'Bearer'
+
+# Configure API key authorization: X-Api-Key
+configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with readarr.ApiClient() as api_client:
+with readarr.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = readarr.BackupApi(api_client)
+
+    try:
+        api_response = api_instance.list_system_backup()
+        print("The response of BackupApi->list_system_backup:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling BackupApi->list_system_backup: %s\n" % e)
+```
+
+* Api Key Authentication (X-Api-Key):
+```python
+from __future__ import print_function
+import time
+import os
+import readarr
+from readarr.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost:8787
+# See configuration.py for a list of all supported configuration parameters.
+configuration = readarr.Configuration(
+    host = "http://localhost:8787"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: apikey
+configuration.api_key['apikey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apikey'] = 'Bearer'
+
+# Configure API key authorization: X-Api-Key
+configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with readarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = readarr.BackupApi(api_client)
 
@@ -226,7 +466,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-No authorization required
+[apikey](../README.md#apikey), [X-Api-Key](../README.md#X-Api-Key)
 
 ### HTTP request headers
 

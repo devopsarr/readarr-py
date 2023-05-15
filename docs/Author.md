@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **author_metadata_id** | **int** |  | [optional] 
 **clean_name** | **str** |  | [optional] 
 **monitored** | **bool** |  | [optional] 
+**monitor_new_items** | [**NewItemMonitorTypes**](NewItemMonitorTypes.md) |  | [optional] 
 **last_info_sync** | **datetime** |  | [optional] 
 **path** | **str** |  | [optional] 
 **root_folder_path** | **str** |  | [optional] 

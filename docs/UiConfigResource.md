@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **show_relative_dates** | **bool** |  | [optional] 
 **enable_color_impaired_mode** | **bool** |  | [optional] 
 **ui_language** | **int** |  | [optional] 
+**theme** | **str** |  | [optional] 
 
 ## Example
 

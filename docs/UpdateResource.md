@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **file_name** | **str** |  | [optional] 
 **url** | **str** |  | [optional] 
 **installed** | **bool** |  | [optional] 
+**installed_on** | **datetime** |  | [optional] 
 **installable** | **bool** |  | [optional] 
 **latest** | **bool** |  | [optional] 
 **changes** | [**UpdateChanges**](UpdateChanges.md) |  | [optional] 
