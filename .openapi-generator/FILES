@@ -280,6 +280,7 @@ readarr/api/ui_config_api.py
 readarr/api/update_api.py
 readarr/api/update_log_file_api.py
 readarr/api_client.py
+readarr/api_response.py
 readarr/configuration.py
 readarr/exceptions.py
 readarr/models/__init__.py
