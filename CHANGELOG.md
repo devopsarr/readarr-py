@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0](https://github.com/devopsarr/readarr-py/compare/v0.2.2...v0.3.0) (2023-05-17)
+
+
+### Features
+
+* **devopsarr/prowlarr-py#11:** add request timeout to config ([04646e9](https://github.com/devopsarr/readarr-py/commit/04646e992e0cd9d6444170c9e27d5f42331b3d0f))
+* pin openapi version and add version management ([c8aff3c](https://github.com/devopsarr/readarr-py/commit/c8aff3c0460da060712f0c22ad188c60895e1087))
+
 ## [0.2.2](https://github.com/devopsarr/readarr-py/compare/v0.2.1...v0.2.2) (2023-03-27)
 
 
