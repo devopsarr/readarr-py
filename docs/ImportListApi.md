@@ -7,16 +7,18 @@ Method | HTTP request | Description
 [**create_import_list**](ImportListApi.md#create_import_list) | **POST** /api/v1/importlist | 
 [**create_import_list_action_by_name**](ImportListApi.md#create_import_list_action_by_name) | **POST** /api/v1/importlist/action/{name} | 
 [**delete_import_list**](ImportListApi.md#delete_import_list) | **DELETE** /api/v1/importlist/{id} | 
+[**delete_import_list_bulk**](ImportListApi.md#delete_import_list_bulk) | **DELETE** /api/v1/importlist/bulk | 
 [**get_import_list_by_id**](ImportListApi.md#get_import_list_by_id) | **GET** /api/v1/importlist/{id} | 
 [**list_import_list**](ImportListApi.md#list_import_list) | **GET** /api/v1/importlist | 
 [**list_import_list_schema**](ImportListApi.md#list_import_list_schema) | **GET** /api/v1/importlist/schema | 
+[**put_import_list_bulk**](ImportListApi.md#put_import_list_bulk) | **PUT** /api/v1/importlist/bulk | 
 [**test_import_list**](ImportListApi.md#test_import_list) | **POST** /api/v1/importlist/test | 
 [**testall_import_list**](ImportListApi.md#testall_import_list) | **POST** /api/v1/importlist/testall | 
 [**update_import_list**](ImportListApi.md#update_import_list) | **PUT** /api/v1/importlist/{id} | 
 
 
 # **create_import_list**
-> ImportListResource create_import_list(import_list_resource=import_list_resource)
+> ImportListResource create_import_list(force_save=force_save, import_list_resource=import_list_resource)
 
 
 
@@ -57,10 +59,11 @@ configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 with readarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = readarr.ImportListApi(api_client)
+    force_save = False # bool |  (optional) (default to False)
     import_list_resource = readarr.ImportListResource() # ImportListResource |  (optional)
 
     try:
-        api_response = api_instance.create_import_list(import_list_resource=import_list_resource)
+        api_response = api_instance.create_import_list(force_save=force_save, import_list_resource=import_list_resource)
         print("The response of ImportListApi->create_import_list:\n")
         pprint(api_response)
     except Exception as e:
@@ -102,10 +105,11 @@ configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 with readarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = readarr.ImportListApi(api_client)
+    force_save = False # bool |  (optional) (default to False)
     import_list_resource = readarr.ImportListResource() # ImportListResource |  (optional)
 
     try:
-        api_response = api_instance.create_import_list(import_list_resource=import_list_resource)
+        api_response = api_instance.create_import_list(force_save=force_save, import_list_resource=import_list_resource)
         print("The response of ImportListApi->create_import_list:\n")
         pprint(api_response)
     except Exception as e:
@@ -116,6 +120,7 @@ with readarr.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **force_save** | **bool**|  | [optional] [default to False]
  **import_list_resource** | [**ImportListResource**](ImportListResource.md)|  | [optional] 
 
 ### Return type
@@ -128,8 +133,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -250,7 +255,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/*+json
+ - **Content-Type**: application/json
  - **Accept**: Not defined
 
 ### HTTP response details
@@ -379,6 +384,125 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **delete_import_list_bulk**
+> delete_import_list_bulk(import_list_bulk_resource=import_list_bulk_resource)
+
+
+
+### Example
+
+* Api Key Authentication (apikey):
+```python
+from __future__ import print_function
+import time
+import os
+import readarr
+from readarr.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost:8787
+# See configuration.py for a list of all supported configuration parameters.
+configuration = readarr.Configuration(
+    host = "http://localhost:8787"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: apikey
+configuration.api_key['apikey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apikey'] = 'Bearer'
+
+# Configure API key authorization: X-Api-Key
+configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with readarr.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = readarr.ImportListApi(api_client)
+    import_list_bulk_resource = readarr.ImportListBulkResource() # ImportListBulkResource |  (optional)
+
+    try:
+        api_instance.delete_import_list_bulk(import_list_bulk_resource=import_list_bulk_resource)
+    except Exception as e:
+        print("Exception when calling ImportListApi->delete_import_list_bulk: %s\n" % e)
+```
+
+* Api Key Authentication (X-Api-Key):
+```python
+from __future__ import print_function
+import time
+import os
+import readarr
+from readarr.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost:8787
+# See configuration.py for a list of all supported configuration parameters.
+configuration = readarr.Configuration(
+    host = "http://localhost:8787"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: apikey
+configuration.api_key['apikey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apikey'] = 'Bearer'
+
+# Configure API key authorization: X-Api-Key
+configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with readarr.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = readarr.ImportListApi(api_client)
+    import_list_bulk_resource = readarr.ImportListBulkResource() # ImportListBulkResource |  (optional)
+
+    try:
+        api_instance.delete_import_list_bulk(import_list_bulk_resource=import_list_bulk_resource)
+    except Exception as e:
+        print("Exception when calling ImportListApi->delete_import_list_bulk: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **import_list_bulk_resource** | [**ImportListBulkResource**](ImportListBulkResource.md)|  | [optional] 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[apikey](../README.md#apikey), [X-Api-Key](../README.md#X-Api-Key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_import_list_by_id**
 > ImportListResource get_import_list_by_id(id)
 
@@ -493,7 +617,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -611,7 +735,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -729,7 +853,130 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** | Success |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **put_import_list_bulk**
+> ImportListResource put_import_list_bulk(import_list_bulk_resource=import_list_bulk_resource)
+
+
+
+### Example
+
+* Api Key Authentication (apikey):
+```python
+from __future__ import print_function
+import time
+import os
+import readarr
+from readarr.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost:8787
+# See configuration.py for a list of all supported configuration parameters.
+configuration = readarr.Configuration(
+    host = "http://localhost:8787"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: apikey
+configuration.api_key['apikey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apikey'] = 'Bearer'
+
+# Configure API key authorization: X-Api-Key
+configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with readarr.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = readarr.ImportListApi(api_client)
+    import_list_bulk_resource = readarr.ImportListBulkResource() # ImportListBulkResource |  (optional)
+
+    try:
+        api_response = api_instance.put_import_list_bulk(import_list_bulk_resource=import_list_bulk_resource)
+        print("The response of ImportListApi->put_import_list_bulk:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ImportListApi->put_import_list_bulk: %s\n" % e)
+```
+
+* Api Key Authentication (X-Api-Key):
+```python
+from __future__ import print_function
+import time
+import os
+import readarr
+from readarr.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost:8787
+# See configuration.py for a list of all supported configuration parameters.
+configuration = readarr.Configuration(
+    host = "http://localhost:8787"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: apikey
+configuration.api_key['apikey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['apikey'] = 'Bearer'
+
+# Configure API key authorization: X-Api-Key
+configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with readarr.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = readarr.ImportListApi(api_client)
+    import_list_bulk_resource = readarr.ImportListBulkResource() # ImportListBulkResource |  (optional)
+
+    try:
+        api_response = api_instance.put_import_list_bulk(import_list_bulk_resource=import_list_bulk_resource)
+        print("The response of ImportListApi->put_import_list_bulk:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling ImportListApi->put_import_list_bulk: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **import_list_bulk_resource** | [**ImportListBulkResource**](ImportListBulkResource.md)|  | [optional] 
+
+### Return type
+
+[**ImportListResource**](ImportListResource.md)
+
+### Authorization
+
+[apikey](../README.md#apikey), [X-Api-Key](../README.md#X-Api-Key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -847,7 +1094,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/*+json
+ - **Content-Type**: application/json
  - **Accept**: Not defined
 
 ### HTTP response details
@@ -972,7 +1219,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_import_list**
-> ImportListResource update_import_list(id, import_list_resource=import_list_resource)
+> ImportListResource update_import_list(id, force_save=force_save, import_list_resource=import_list_resource)
 
 
 
@@ -1014,10 +1261,11 @@ with readarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = readarr.ImportListApi(api_client)
     id = 'id_example' # str | 
+    force_save = False # bool |  (optional) (default to False)
     import_list_resource = readarr.ImportListResource() # ImportListResource |  (optional)
 
     try:
-        api_response = api_instance.update_import_list(id, import_list_resource=import_list_resource)
+        api_response = api_instance.update_import_list(id, force_save=force_save, import_list_resource=import_list_resource)
         print("The response of ImportListApi->update_import_list:\n")
         pprint(api_response)
     except Exception as e:
@@ -1060,10 +1308,11 @@ with readarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = readarr.ImportListApi(api_client)
     id = 'id_example' # str | 
+    force_save = False # bool |  (optional) (default to False)
     import_list_resource = readarr.ImportListResource() # ImportListResource |  (optional)
 
     try:
-        api_response = api_instance.update_import_list(id, import_list_resource=import_list_resource)
+        api_response = api_instance.update_import_list(id, force_save=force_save, import_list_resource=import_list_resource)
         print("The response of ImportListApi->update_import_list:\n")
         pprint(api_response)
     except Exception as e:
@@ -1075,6 +1324,7 @@ with readarr.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
+ **force_save** | **bool**|  | [optional] [default to False]
  **import_list_resource** | [**ImportListResource**](ImportListResource.md)|  | [optional] 
 
 ### Return type
@@ -1087,8 +1337,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/*+json
- - **Accept**: text/plain, application/json, text/json
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |

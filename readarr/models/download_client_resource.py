@@ -42,7 +42,9 @@ class DownloadClientResource(BaseModel):
     enable: Optional[bool]
     protocol: Optional[DownloadProtocol]
     priority: Optional[int]
-    __properties = ["id", "name", "fields", "implementationName", "implementation", "configContract", "infoLink", "message", "tags", "presets", "enable", "protocol", "priority"]
+    remove_completed_downloads: Optional[bool]
+    remove_failed_downloads: Optional[bool]
+    __properties = ["id", "name", "fields", "implementationName", "implementation", "configContract", "infoLink", "message", "tags", "presets", "enable", "protocol", "priority", "removeCompletedDownloads", "removeFailedDownloads"]
 
     class Config:
         allow_population_by_field_name = True
@@ -144,7 +146,9 @@ class DownloadClientResource(BaseModel):
             "presets": [DownloadClientResource.from_dict(_item) for _item in obj.get("presets")] if obj.get("presets") is not None else None,
             "enable": obj.get("enable"),
             "protocol": obj.get("protocol"),
-            "priority": obj.get("priority")
+            "priority": obj.get("priority"),
+            "remove_completed_downloads": obj.get("removeCompletedDownloads"),
+            "remove_failed_downloads": obj.get("removeFailedDownloads")
         })
         return _obj
 

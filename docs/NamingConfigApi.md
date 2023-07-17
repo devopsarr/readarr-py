@@ -242,7 +242,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -252,7 +252,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_naming_config_examples**
-> get_naming_config_examples(rename_books=rename_books, replace_illegal_characters=replace_illegal_characters, standard_book_format=standard_book_format, author_folder_format=author_folder_format, include_author_name=include_author_name, include_book_title=include_book_title, include_quality=include_quality, replace_spaces=replace_spaces, separator=separator, number_style=number_style, id=id, resource_name=resource_name)
+> get_naming_config_examples(rename_books=rename_books, replace_illegal_characters=replace_illegal_characters, colon_replacement_format=colon_replacement_format, standard_book_format=standard_book_format, author_folder_format=author_folder_format, include_author_name=include_author_name, include_book_title=include_book_title, include_quality=include_quality, replace_spaces=replace_spaces, separator=separator, number_style=number_style, id=id, resource_name=resource_name)
 
 
 
@@ -295,6 +295,7 @@ with readarr.ApiClient(configuration) as api_client:
     api_instance = readarr.NamingConfigApi(api_client)
     rename_books = True # bool |  (optional)
     replace_illegal_characters = True # bool |  (optional)
+    colon_replacement_format = 56 # int |  (optional)
     standard_book_format = 'standard_book_format_example' # str |  (optional)
     author_folder_format = 'author_folder_format_example' # str |  (optional)
     include_author_name = True # bool |  (optional)
@@ -307,7 +308,7 @@ with readarr.ApiClient(configuration) as api_client:
     resource_name = 'resource_name_example' # str |  (optional)
 
     try:
-        api_instance.get_naming_config_examples(rename_books=rename_books, replace_illegal_characters=replace_illegal_characters, standard_book_format=standard_book_format, author_folder_format=author_folder_format, include_author_name=include_author_name, include_book_title=include_book_title, include_quality=include_quality, replace_spaces=replace_spaces, separator=separator, number_style=number_style, id=id, resource_name=resource_name)
+        api_instance.get_naming_config_examples(rename_books=rename_books, replace_illegal_characters=replace_illegal_characters, colon_replacement_format=colon_replacement_format, standard_book_format=standard_book_format, author_folder_format=author_folder_format, include_author_name=include_author_name, include_book_title=include_book_title, include_quality=include_quality, replace_spaces=replace_spaces, separator=separator, number_style=number_style, id=id, resource_name=resource_name)
     except Exception as e:
         print("Exception when calling NamingConfigApi->get_naming_config_examples: %s\n" % e)
 ```
@@ -349,6 +350,7 @@ with readarr.ApiClient(configuration) as api_client:
     api_instance = readarr.NamingConfigApi(api_client)
     rename_books = True # bool |  (optional)
     replace_illegal_characters = True # bool |  (optional)
+    colon_replacement_format = 56 # int |  (optional)
     standard_book_format = 'standard_book_format_example' # str |  (optional)
     author_folder_format = 'author_folder_format_example' # str |  (optional)
     include_author_name = True # bool |  (optional)
@@ -361,7 +363,7 @@ with readarr.ApiClient(configuration) as api_client:
     resource_name = 'resource_name_example' # str |  (optional)
 
     try:
-        api_instance.get_naming_config_examples(rename_books=rename_books, replace_illegal_characters=replace_illegal_characters, standard_book_format=standard_book_format, author_folder_format=author_folder_format, include_author_name=include_author_name, include_book_title=include_book_title, include_quality=include_quality, replace_spaces=replace_spaces, separator=separator, number_style=number_style, id=id, resource_name=resource_name)
+        api_instance.get_naming_config_examples(rename_books=rename_books, replace_illegal_characters=replace_illegal_characters, colon_replacement_format=colon_replacement_format, standard_book_format=standard_book_format, author_folder_format=author_folder_format, include_author_name=include_author_name, include_book_title=include_book_title, include_quality=include_quality, replace_spaces=replace_spaces, separator=separator, number_style=number_style, id=id, resource_name=resource_name)
     except Exception as e:
         print("Exception when calling NamingConfigApi->get_naming_config_examples: %s\n" % e)
 ```
@@ -372,6 +374,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **rename_books** | **bool**|  | [optional] 
  **replace_illegal_characters** | **bool**|  | [optional] 
+ **colon_replacement_format** | **int**|  | [optional] 
  **standard_book_format** | **str**|  | [optional] 
  **author_folder_format** | **str**|  | [optional] 
  **include_author_name** | **bool**|  | [optional] 

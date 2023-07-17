@@ -152,6 +152,7 @@ from readarr.models.database_type import DatabaseType
 from readarr.models.delay_profile_resource import DelayProfileResource
 from readarr.models.development_config_resource import DevelopmentConfigResource
 from readarr.models.disk_space_resource import DiskSpaceResource
+from readarr.models.download_client_bulk_resource import DownloadClientBulkResource
 from readarr.models.download_client_config_resource import DownloadClientConfigResource
 from readarr.models.download_client_resource import DownloadClientResource
 from readarr.models.download_protocol import DownloadProtocol
@@ -168,10 +169,12 @@ from readarr.models.history_resource import HistoryResource
 from readarr.models.history_resource_paging_resource import HistoryResourcePagingResource
 from readarr.models.host_config_resource import HostConfigResource
 from readarr.models.i_custom_format_specification import ICustomFormatSpecification
+from readarr.models.import_list_bulk_resource import ImportListBulkResource
 from readarr.models.import_list_exclusion_resource import ImportListExclusionResource
 from readarr.models.import_list_monitor_type import ImportListMonitorType
 from readarr.models.import_list_resource import ImportListResource
 from readarr.models.import_list_type import ImportListType
+from readarr.models.indexer_bulk_resource import IndexerBulkResource
 from readarr.models.indexer_config_resource import IndexerConfigResource
 from readarr.models.indexer_resource import IndexerResource
 from readarr.models.iso_country import IsoCountry

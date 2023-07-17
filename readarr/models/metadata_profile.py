@@ -17,7 +17,7 @@ import re  # noqa: F401
 import json
 
 
-from typing import Optional, Union
+from typing import List, Optional, Union
 from pydantic import BaseModel
 
 class MetadataProfile(BaseModel):
@@ -35,7 +35,7 @@ class MetadataProfile(BaseModel):
     skip_series_secondary: Optional[bool]
     allowed_languages: Optional[str]
     min_pages: Optional[int]
-    ignored: Optional[str]
+    ignored: Optional[List]
     __properties = ["id", "name", "minPopularity", "skipMissingDate", "skipMissingIsbn", "skipPartsAndSets", "skipSeriesSecondary", "allowedLanguages", "minPages", "ignored"]
 
     class Config:

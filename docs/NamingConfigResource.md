@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional] 
 **rename_books** | **bool** |  | [optional] 
 **replace_illegal_characters** | **bool** |  | [optional] 
+**colon_replacement_format** | **int** |  | [optional] 
 **standard_book_format** | **str** |  | [optional] 
 **author_folder_format** | **str** |  | [optional] 
 **include_author_name** | **bool** |  | [optional] 

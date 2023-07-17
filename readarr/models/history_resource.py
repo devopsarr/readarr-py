@@ -37,6 +37,7 @@ class HistoryResource(BaseModel):
     source_title: Optional[str]
     quality: Optional[QualityModel]
     custom_formats: Optional[List]
+    custom_format_score: Optional[int]
     quality_cutoff_not_met: Optional[bool]
     var_date: Optional[datetime]
     download_id: Optional[str]
@@ -44,7 +45,7 @@ class HistoryResource(BaseModel):
     data: Optional[Dict]
     book: Optional[BookResource]
     author: Optional[AuthorResource]
-    __properties = ["id", "bookId", "authorId", "sourceTitle", "quality", "customFormats", "qualityCutoffNotMet", "date", "downloadId", "eventType", "data", "book", "author"]
+    __properties = ["id", "bookId", "authorId", "sourceTitle", "quality", "customFormats", "customFormatScore", "qualityCutoffNotMet", "date", "downloadId", "eventType", "data", "book", "author"]
 
     class Config:
         allow_population_by_field_name = True
@@ -123,6 +124,7 @@ class HistoryResource(BaseModel):
             "source_title": obj.get("sourceTitle"),
             "quality": QualityModel.from_dict(obj.get("quality")) if obj.get("quality") is not None else None,
             "custom_formats": [CustomFormatResource.from_dict(_item) for _item in obj.get("customFormats")] if obj.get("customFormats") is not None else None,
+            "custom_format_score": obj.get("customFormatScore"),
             "quality_cutoff_not_met": obj.get("qualityCutoffNotMet"),
             "var_date": obj.get("date"),
             "download_id": obj.get("downloadId"),

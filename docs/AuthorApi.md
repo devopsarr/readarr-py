@@ -135,7 +135,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_author**
-> delete_author(id)
+> delete_author(id, delete_files=delete_files, add_import_list_exclusion=add_import_list_exclusion)
 
 
 
@@ -177,9 +177,11 @@ with readarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = readarr.AuthorApi(api_client)
     id = 56 # int | 
+    delete_files = False # bool |  (optional) (default to False)
+    add_import_list_exclusion = False # bool |  (optional) (default to False)
 
     try:
-        api_instance.delete_author(id)
+        api_instance.delete_author(id, delete_files=delete_files, add_import_list_exclusion=add_import_list_exclusion)
     except Exception as e:
         print("Exception when calling AuthorApi->delete_author: %s\n" % e)
 ```
@@ -220,9 +222,11 @@ with readarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = readarr.AuthorApi(api_client)
     id = 56 # int | 
+    delete_files = False # bool |  (optional) (default to False)
+    add_import_list_exclusion = False # bool |  (optional) (default to False)
 
     try:
-        api_instance.delete_author(id)
+        api_instance.delete_author(id, delete_files=delete_files, add_import_list_exclusion=add_import_list_exclusion)
     except Exception as e:
         print("Exception when calling AuthorApi->delete_author: %s\n" % e)
 ```
@@ -232,6 +236,8 @@ with readarr.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
+ **delete_files** | **bool**|  | [optional] [default to False]
+ **add_import_list_exclusion** | **bool**|  | [optional] [default to False]
 
 ### Return type
 
@@ -367,7 +373,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
@@ -495,7 +501,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_author**
-> AuthorResource update_author(id, author_resource=author_resource)
+> AuthorResource update_author(id, move_files=move_files, author_resource=author_resource)
 
 
 
@@ -537,10 +543,11 @@ with readarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = readarr.AuthorApi(api_client)
     id = 'id_example' # str | 
+    move_files = False # bool |  (optional) (default to False)
     author_resource = readarr.AuthorResource() # AuthorResource |  (optional)
 
     try:
-        api_response = api_instance.update_author(id, author_resource=author_resource)
+        api_response = api_instance.update_author(id, move_files=move_files, author_resource=author_resource)
         print("The response of AuthorApi->update_author:\n")
         pprint(api_response)
     except Exception as e:
@@ -583,10 +590,11 @@ with readarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = readarr.AuthorApi(api_client)
     id = 'id_example' # str | 
+    move_files = False # bool |  (optional) (default to False)
     author_resource = readarr.AuthorResource() # AuthorResource |  (optional)
 
     try:
-        api_response = api_instance.update_author(id, author_resource=author_resource)
+        api_response = api_instance.update_author(id, move_files=move_files, author_resource=author_resource)
         print("The response of AuthorApi->update_author:\n")
         pprint(api_response)
     except Exception as e:
@@ -598,6 +606,7 @@ with readarr.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
+ **move_files** | **bool**|  | [optional] [default to False]
  **author_resource** | [**AuthorResource**](AuthorResource.md)|  | [optional] 
 
 ### Return type

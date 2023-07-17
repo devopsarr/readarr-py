@@ -29,6 +29,7 @@ class NamingConfigResource(BaseModel):
     id: Optional[int]
     rename_books: Optional[bool]
     replace_illegal_characters: Optional[bool]
+    colon_replacement_format: Optional[int]
     standard_book_format: Optional[str]
     author_folder_format: Optional[str]
     include_author_name: Optional[bool]
@@ -37,7 +38,7 @@ class NamingConfigResource(BaseModel):
     replace_spaces: Optional[bool]
     separator: Optional[str]
     number_style: Optional[str]
-    __properties = ["id", "renameBooks", "replaceIllegalCharacters", "standardBookFormat", "authorFolderFormat", "includeAuthorName", "includeBookTitle", "includeQuality", "replaceSpaces", "separator", "numberStyle"]
+    __properties = ["id", "renameBooks", "replaceIllegalCharacters", "colonReplacementFormat", "standardBookFormat", "authorFolderFormat", "includeAuthorName", "includeBookTitle", "includeQuality", "replaceSpaces", "separator", "numberStyle"]
 
     class Config:
         allow_population_by_field_name = True
@@ -97,6 +98,7 @@ class NamingConfigResource(BaseModel):
             "id": obj.get("id"),
             "rename_books": obj.get("renameBooks"),
             "replace_illegal_characters": obj.get("replaceIllegalCharacters"),
+            "colon_replacement_format": obj.get("colonReplacementFormat"),
             "standard_book_format": obj.get("standardBookFormat"),
             "author_folder_format": obj.get("authorFolderFormat"),
             "include_author_name": obj.get("includeAuthorName"),

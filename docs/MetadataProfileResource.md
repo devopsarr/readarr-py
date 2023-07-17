@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **skip_series_secondary** | **bool** |  | [optional] 
 **allowed_languages** | **str** |  | [optional] 
 **min_pages** | **int** |  | [optional] 
-**ignored** | **str** |  | [optional] 
+**ignored** | **List[str]** |  | [optional] 
 
 ## Example
 
