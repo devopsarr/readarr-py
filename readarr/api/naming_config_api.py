@@ -291,7 +291,7 @@ class NamingConfigApi(object):
 
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['text/plain', 'application/json', 'text/json'])  # noqa: E501
+            ['application/json'])  # noqa: E501
 
         # authentication setting
         _auth_settings = ['apikey', 'X-Api-Key']  # noqa: E501
@@ -318,19 +318,21 @@ class NamingConfigApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def get_naming_config_examples(self, rename_books : Optional[StrictBool] = None, replace_illegal_characters : Optional[StrictBool] = None, standard_book_format : Optional[StrictStr] = None, author_folder_format : Optional[StrictStr] = None, include_author_name : Optional[StrictBool] = None, include_book_title : Optional[StrictBool] = None, include_quality : Optional[StrictBool] = None, replace_spaces : Optional[StrictBool] = None, separator : Optional[StrictStr] = None, number_style : Optional[StrictStr] = None, id : Optional[StrictInt] = None, resource_name : Optional[StrictStr] = None, **kwargs) -> None:  # noqa: E501
+    def get_naming_config_examples(self, rename_books : Optional[StrictBool] = None, replace_illegal_characters : Optional[StrictBool] = None, colon_replacement_format : Optional[StrictInt] = None, standard_book_format : Optional[StrictStr] = None, author_folder_format : Optional[StrictStr] = None, include_author_name : Optional[StrictBool] = None, include_book_title : Optional[StrictBool] = None, include_quality : Optional[StrictBool] = None, replace_spaces : Optional[StrictBool] = None, separator : Optional[StrictStr] = None, number_style : Optional[StrictStr] = None, id : Optional[StrictInt] = None, resource_name : Optional[StrictStr] = None, **kwargs) -> None:  # noqa: E501
         """get_naming_config_examples  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_naming_config_examples(rename_books, replace_illegal_characters, standard_book_format, author_folder_format, include_author_name, include_book_title, include_quality, replace_spaces, separator, number_style, id, resource_name, async_req=True)
+        >>> thread = api.get_naming_config_examples(rename_books, replace_illegal_characters, colon_replacement_format, standard_book_format, author_folder_format, include_author_name, include_book_title, include_quality, replace_spaces, separator, number_style, id, resource_name, async_req=True)
         >>> result = thread.get()
 
         :param rename_books:
         :type rename_books: bool
         :param replace_illegal_characters:
         :type replace_illegal_characters: bool
+        :param colon_replacement_format:
+        :type colon_replacement_format: int
         :param standard_book_format:
         :type standard_book_format: str
         :param author_folder_format:
@@ -367,22 +369,24 @@ class NamingConfigApi(object):
         :rtype: None
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_naming_config_examples_with_http_info(rename_books, replace_illegal_characters, standard_book_format, author_folder_format, include_author_name, include_book_title, include_quality, replace_spaces, separator, number_style, id, resource_name, **kwargs)  # noqa: E501
+        return self.get_naming_config_examples_with_http_info(rename_books, replace_illegal_characters, colon_replacement_format, standard_book_format, author_folder_format, include_author_name, include_book_title, include_quality, replace_spaces, separator, number_style, id, resource_name, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def get_naming_config_examples_with_http_info(self, rename_books : Optional[StrictBool] = None, replace_illegal_characters : Optional[StrictBool] = None, standard_book_format : Optional[StrictStr] = None, author_folder_format : Optional[StrictStr] = None, include_author_name : Optional[StrictBool] = None, include_book_title : Optional[StrictBool] = None, include_quality : Optional[StrictBool] = None, replace_spaces : Optional[StrictBool] = None, separator : Optional[StrictStr] = None, number_style : Optional[StrictStr] = None, id : Optional[StrictInt] = None, resource_name : Optional[StrictStr] = None, **kwargs):  # noqa: E501
+    def get_naming_config_examples_with_http_info(self, rename_books : Optional[StrictBool] = None, replace_illegal_characters : Optional[StrictBool] = None, colon_replacement_format : Optional[StrictInt] = None, standard_book_format : Optional[StrictStr] = None, author_folder_format : Optional[StrictStr] = None, include_author_name : Optional[StrictBool] = None, include_book_title : Optional[StrictBool] = None, include_quality : Optional[StrictBool] = None, replace_spaces : Optional[StrictBool] = None, separator : Optional[StrictStr] = None, number_style : Optional[StrictStr] = None, id : Optional[StrictInt] = None, resource_name : Optional[StrictStr] = None, **kwargs):  # noqa: E501
         """get_naming_config_examples  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_naming_config_examples_with_http_info(rename_books, replace_illegal_characters, standard_book_format, author_folder_format, include_author_name, include_book_title, include_quality, replace_spaces, separator, number_style, id, resource_name, async_req=True)
+        >>> thread = api.get_naming_config_examples_with_http_info(rename_books, replace_illegal_characters, colon_replacement_format, standard_book_format, author_folder_format, include_author_name, include_book_title, include_quality, replace_spaces, separator, number_style, id, resource_name, async_req=True)
         >>> result = thread.get()
 
         :param rename_books:
         :type rename_books: bool
         :param replace_illegal_characters:
         :type replace_illegal_characters: bool
+        :param colon_replacement_format:
+        :type colon_replacement_format: int
         :param standard_book_format:
         :type standard_book_format: str
         :param author_folder_format:
@@ -432,6 +436,7 @@ class NamingConfigApi(object):
         _all_params = [
             'rename_books',
             'replace_illegal_characters',
+            'colon_replacement_format',
             'standard_book_format',
             'author_folder_format',
             'include_author_name',
@@ -476,6 +481,8 @@ class NamingConfigApi(object):
             _query_params.append(('RenameBooks', _params['rename_books']))
         if _params.get('replace_illegal_characters') is not None:  # noqa: E501
             _query_params.append(('ReplaceIllegalCharacters', _params['replace_illegal_characters']))
+        if _params.get('colon_replacement_format') is not None:  # noqa: E501
+            _query_params.append(('ColonReplacementFormat', _params['colon_replacement_format']))
         if _params.get('standard_book_format') is not None:  # noqa: E501
             _query_params.append(('StandardBookFormat', _params['standard_book_format']))
         if _params.get('author_folder_format') is not None:  # noqa: E501

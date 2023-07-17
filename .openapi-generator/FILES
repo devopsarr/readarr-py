@@ -72,6 +72,7 @@ docs/DevelopmentConfigResource.md
 docs/DiskSpaceApi.md
 docs/DiskSpaceResource.md
 docs/DownloadClientApi.md
+docs/DownloadClientBulkResource.md
 docs/DownloadClientConfigApi.md
 docs/DownloadClientConfigResource.md
 docs/DownloadClientResource.md
@@ -95,12 +96,14 @@ docs/HostConfigApi.md
 docs/HostConfigResource.md
 docs/ICustomFormatSpecification.md
 docs/ImportListApi.md
+docs/ImportListBulkResource.md
 docs/ImportListExclusionApi.md
 docs/ImportListExclusionResource.md
 docs/ImportListMonitorType.md
 docs/ImportListResource.md
 docs/ImportListType.md
 docs/IndexerApi.md
+docs/IndexerBulkResource.md
 docs/IndexerConfigApi.md
 docs/IndexerConfigResource.md
 docs/IndexerResource.md
@@ -356,6 +359,7 @@ readarr/models/database_type.py
 readarr/models/delay_profile_resource.py
 readarr/models/development_config_resource.py
 readarr/models/disk_space_resource.py
+readarr/models/download_client_bulk_resource.py
 readarr/models/download_client_config_resource.py
 readarr/models/download_client_resource.py
 readarr/models/download_protocol.py
@@ -372,10 +376,12 @@ readarr/models/history_resource.py
 readarr/models/history_resource_paging_resource.py
 readarr/models/host_config_resource.py
 readarr/models/i_custom_format_specification.py
+readarr/models/import_list_bulk_resource.py
 readarr/models/import_list_exclusion_resource.py
 readarr/models/import_list_monitor_type.py
 readarr/models/import_list_resource.py
 readarr/models/import_list_type.py
+readarr/models/indexer_bulk_resource.py
 readarr/models/indexer_config_resource.py
 readarr/models/indexer_resource.py
 readarr/models/iso_country.py

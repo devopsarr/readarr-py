@@ -29,10 +29,8 @@ class DownloadClientConfigResource(BaseModel):
     id: Optional[int]
     download_client_working_folders: Optional[str]
     enable_completed_download_handling: Optional[bool]
-    remove_completed_downloads: Optional[bool]
     auto_redownload_failed: Optional[bool]
-    remove_failed_downloads: Optional[bool]
-    __properties = ["id", "downloadClientWorkingFolders", "enableCompletedDownloadHandling", "removeCompletedDownloads", "autoRedownloadFailed", "removeFailedDownloads"]
+    __properties = ["id", "downloadClientWorkingFolders", "enableCompletedDownloadHandling", "autoRedownloadFailed"]
 
     class Config:
         allow_population_by_field_name = True
@@ -80,9 +78,7 @@ class DownloadClientConfigResource(BaseModel):
             "id": obj.get("id"),
             "download_client_working_folders": obj.get("downloadClientWorkingFolders"),
             "enable_completed_download_handling": obj.get("enableCompletedDownloadHandling"),
-            "remove_completed_downloads": obj.get("removeCompletedDownloads"),
-            "auto_redownload_failed": obj.get("autoRedownloadFailed"),
-            "remove_failed_downloads": obj.get("removeFailedDownloads")
+            "auto_redownload_failed": obj.get("autoRedownloadFailed")
         })
         return _obj
 

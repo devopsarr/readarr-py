@@ -7,9 +7,7 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional] 
 **download_client_working_folders** | **str** |  | [optional] 
 **enable_completed_download_handling** | **bool** |  | [optional] 
-**remove_completed_downloads** | **bool** |  | [optional] 
 **auto_redownload_failed** | **bool** |  | [optional] 
-**remove_failed_downloads** | **bool** |  | [optional] 
 
 ## Example
 

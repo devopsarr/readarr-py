@@ -137,7 +137,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_book**
-> delete_book(id)
+> delete_book(id, delete_files=delete_files, add_import_list_exclusion=add_import_list_exclusion)
 
 
 
@@ -179,9 +179,11 @@ with readarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = readarr.BookApi(api_client)
     id = 56 # int | 
+    delete_files = False # bool |  (optional) (default to False)
+    add_import_list_exclusion = False # bool |  (optional) (default to False)
 
     try:
-        api_instance.delete_book(id)
+        api_instance.delete_book(id, delete_files=delete_files, add_import_list_exclusion=add_import_list_exclusion)
     except Exception as e:
         print("Exception when calling BookApi->delete_book: %s\n" % e)
 ```
@@ -222,9 +224,11 @@ with readarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = readarr.BookApi(api_client)
     id = 56 # int | 
+    delete_files = False # bool |  (optional) (default to False)
+    add_import_list_exclusion = False # bool |  (optional) (default to False)
 
     try:
-        api_instance.delete_book(id)
+        api_instance.delete_book(id, delete_files=delete_files, add_import_list_exclusion=add_import_list_exclusion)
     except Exception as e:
         print("Exception when calling BookApi->delete_book: %s\n" % e)
 ```
@@ -234,6 +238,8 @@ with readarr.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**|  | 
+ **delete_files** | **bool**|  | [optional] [default to False]
+ **add_import_list_exclusion** | **bool**|  | [optional] [default to False]
 
 ### Return type
 
@@ -369,7 +375,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |

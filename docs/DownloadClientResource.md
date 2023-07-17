@@ -17,6 +17,8 @@ Name | Type | Description | Notes
 **enable** | **bool** |  | [optional] 
 **protocol** | [**DownloadProtocol**](DownloadProtocol.md) |  | [optional] 
 **priority** | **int** |  | [optional] 
+**remove_completed_downloads** | **bool** |  | [optional] 
+**remove_failed_downloads** | **bool** |  | [optional] 
 
 ## Example
 

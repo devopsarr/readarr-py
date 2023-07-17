@@ -17,7 +17,7 @@ import re  # noqa: F401
 from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
-from pydantic import StrictInt, StrictStr
+from pydantic import StrictBool, StrictInt, StrictStr
 
 from typing import List, Optional
 
@@ -191,17 +191,21 @@ class AuthorApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def delete_author(self, id : StrictInt, **kwargs) -> None:  # noqa: E501
+    def delete_author(self, id : StrictInt, delete_files : Optional[StrictBool] = None, add_import_list_exclusion : Optional[StrictBool] = None, **kwargs) -> None:  # noqa: E501
         """delete_author  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_author(id, async_req=True)
+        >>> thread = api.delete_author(id, delete_files, add_import_list_exclusion, async_req=True)
         >>> result = thread.get()
 
         :param id: (required)
         :type id: int
+        :param delete_files:
+        :type delete_files: bool
+        :param add_import_list_exclusion:
+        :type add_import_list_exclusion: bool
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -218,20 +222,24 @@ class AuthorApi(object):
         :rtype: None
         """
         kwargs['_return_http_data_only'] = True
-        return self.delete_author_with_http_info(id, **kwargs)  # noqa: E501
+        return self.delete_author_with_http_info(id, delete_files, add_import_list_exclusion, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def delete_author_with_http_info(self, id : StrictInt, **kwargs):  # noqa: E501
+    def delete_author_with_http_info(self, id : StrictInt, delete_files : Optional[StrictBool] = None, add_import_list_exclusion : Optional[StrictBool] = None, **kwargs):  # noqa: E501
         """delete_author  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_author_with_http_info(id, async_req=True)
+        >>> thread = api.delete_author_with_http_info(id, delete_files, add_import_list_exclusion, async_req=True)
         >>> result = thread.get()
 
         :param id: (required)
         :type id: int
+        :param delete_files:
+        :type delete_files: bool
+        :param add_import_list_exclusion:
+        :type add_import_list_exclusion: bool
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -259,7 +267,9 @@ class AuthorApi(object):
         _params = locals()
 
         _all_params = [
-            'id'
+            'id',
+            'delete_files',
+            'add_import_list_exclusion'
         ]
         _all_params.extend(
             [
@@ -292,6 +302,10 @@ class AuthorApi(object):
 
         # process the query parameters
         _query_params = []
+        if _params.get('delete_files') is not None:  # noqa: E501
+            _query_params.append(('deleteFiles', _params['delete_files']))
+        if _params.get('add_import_list_exclusion') is not None:  # noqa: E501
+            _query_params.append(('addImportListExclusion', _params['add_import_list_exclusion']))
 
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
@@ -440,7 +454,7 @@ class AuthorApi(object):
 
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
-            ['text/plain', 'application/json', 'text/json'])  # noqa: E501
+            ['application/json'])  # noqa: E501
 
         # authentication setting
         _auth_settings = ['apikey', 'X-Api-Key']  # noqa: E501
@@ -601,17 +615,19 @@ class AuthorApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def update_author(self, id : StrictStr, author_resource : Optional[AuthorResource] = None, **kwargs) -> AuthorResource:  # noqa: E501
+    def update_author(self, id : StrictStr, move_files : Optional[StrictBool] = None, author_resource : Optional[AuthorResource] = None, **kwargs) -> AuthorResource:  # noqa: E501
         """update_author  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.update_author(id, author_resource, async_req=True)
+        >>> thread = api.update_author(id, move_files, author_resource, async_req=True)
         >>> result = thread.get()
 
         :param id: (required)
         :type id: str
+        :param move_files:
+        :type move_files: bool
         :param author_resource:
         :type author_resource: AuthorResource
         :param async_req: Whether to execute the request asynchronously.
@@ -630,20 +646,22 @@ class AuthorApi(object):
         :rtype: AuthorResource
         """
         kwargs['_return_http_data_only'] = True
-        return self.update_author_with_http_info(id, author_resource, **kwargs)  # noqa: E501
+        return self.update_author_with_http_info(id, move_files, author_resource, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def update_author_with_http_info(self, id : StrictStr, author_resource : Optional[AuthorResource] = None, **kwargs):  # noqa: E501
+    def update_author_with_http_info(self, id : StrictStr, move_files : Optional[StrictBool] = None, author_resource : Optional[AuthorResource] = None, **kwargs):  # noqa: E501
         """update_author  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.update_author_with_http_info(id, author_resource, async_req=True)
+        >>> thread = api.update_author_with_http_info(id, move_files, author_resource, async_req=True)
         >>> result = thread.get()
 
         :param id: (required)
         :type id: str
+        :param move_files:
+        :type move_files: bool
         :param author_resource:
         :type author_resource: AuthorResource
         :param async_req: Whether to execute the request asynchronously.
@@ -674,6 +692,7 @@ class AuthorApi(object):
 
         _all_params = [
             'id',
+            'move_files',
             'author_resource'
         ]
         _all_params.extend(
@@ -707,6 +726,8 @@ class AuthorApi(object):
 
         # process the query parameters
         _query_params = []
+        if _params.get('move_files') is not None:  # noqa: E501
+            _query_params.append(('moveFiles', _params['move_files']))
 
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
