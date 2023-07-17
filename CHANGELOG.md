@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/devopsarr/readarr-py/compare/v0.3.0...v0.4.0) (2023-07-17)
+
+
+### Features
+
+* update readarr swagger location ([c65593f](https://github.com/devopsarr/readarr-py/commit/c65593fcdb5e1e2452ea03962648869d9c32c67f))
+
 ## [0.3.0](https://github.com/devopsarr/readarr-py/compare/v0.2.2...v0.3.0) (2023-05-17)
 
 
