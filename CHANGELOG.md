@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/devopsarr/readarr-py/compare/v0.4.0...v0.4.1) (2023-07-21)
+
+
+### Bug Fixes
+
+* set pydantic version ([c329136](https://github.com/devopsarr/readarr-py/commit/c3291365828914dbcb31fa0771acb25430b18b92))
+
 ## [0.4.0](https://github.com/devopsarr/readarr-py/compare/v0.3.0...v0.4.0) (2023-07-17)
 
 
