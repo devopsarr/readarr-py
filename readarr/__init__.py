@@ -142,6 +142,7 @@ from readarr.models.certificate_validation_type import CertificateValidationType
 from readarr.models.command import Command
 from readarr.models.command_priority import CommandPriority
 from readarr.models.command_resource import CommandResource
+from readarr.models.command_result import CommandResult
 from readarr.models.command_status import CommandStatus
 from readarr.models.command_trigger import CommandTrigger
 from readarr.models.custom_filter_resource import CustomFilterResource
