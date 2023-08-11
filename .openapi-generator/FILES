@@ -108,7 +108,6 @@ docs/IndexerBulkResource.md
 docs/IndexerConfigApi.md
 docs/IndexerConfigResource.md
 docs/IndexerResource.md
-docs/InitializeJsApi.md
 docs/IsoCountry.md
 docs/LanguageApi.md
 docs/LanguageResource.md
@@ -265,7 +264,6 @@ readarr/api/import_list_api.py
 readarr/api/import_list_exclusion_api.py
 readarr/api/indexer_api.py
 readarr/api/indexer_config_api.py
-readarr/api/initialize_js_api.py
 readarr/api/language_api.py
 readarr/api/localization_api.py
 readarr/api/log_api.py

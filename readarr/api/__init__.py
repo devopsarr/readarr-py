@@ -45,7 +45,6 @@ from readarr.api.import_list_api import ImportListApi
 from readarr.api.import_list_exclusion_api import ImportListExclusionApi
 from readarr.api.indexer_api import IndexerApi
 from readarr.api.indexer_config_api import IndexerConfigApi
-from readarr.api.initialize_js_api import InitializeJsApi
 from readarr.api.language_api import LanguageApi
 from readarr.api.localization_api import LocalizationApi
 from readarr.api.log_api import LogApi
