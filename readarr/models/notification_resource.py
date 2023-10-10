@@ -43,6 +43,7 @@ class NotificationResource(BaseModel):
     on_release_import: Optional[bool]
     on_upgrade: Optional[bool]
     on_rename: Optional[bool]
+    on_author_added: Optional[bool]
     on_author_delete: Optional[bool]
     on_book_delete: Optional[bool]
     on_book_file_delete: Optional[bool]
@@ -56,6 +57,7 @@ class NotificationResource(BaseModel):
     supports_on_release_import: Optional[bool]
     supports_on_upgrade: Optional[bool]
     supports_on_rename: Optional[bool]
+    supports_on_author_added: Optional[bool]
     supports_on_author_delete: Optional[bool]
     supports_on_book_delete: Optional[bool]
     supports_on_book_file_delete: Optional[bool]
@@ -67,7 +69,7 @@ class NotificationResource(BaseModel):
     supports_on_book_retag: Optional[bool]
     supports_on_application_update: Optional[bool]
     test_command: Optional[str]
-    __properties = ["id", "name", "fields", "implementationName", "implementation", "configContract", "infoLink", "message", "tags", "presets", "link", "onGrab", "onReleaseImport", "onUpgrade", "onRename", "onAuthorDelete", "onBookDelete", "onBookFileDelete", "onBookFileDeleteForUpgrade", "onHealthIssue", "onDownloadFailure", "onImportFailure", "onBookRetag", "onApplicationUpdate", "supportsOnGrab", "supportsOnReleaseImport", "supportsOnUpgrade", "supportsOnRename", "supportsOnAuthorDelete", "supportsOnBookDelete", "supportsOnBookFileDelete", "supportsOnBookFileDeleteForUpgrade", "supportsOnHealthIssue", "includeHealthWarnings", "supportsOnDownloadFailure", "supportsOnImportFailure", "supportsOnBookRetag", "supportsOnApplicationUpdate", "testCommand"]
+    __properties = ["id", "name", "fields", "implementationName", "implementation", "configContract", "infoLink", "message", "tags", "presets", "link", "onGrab", "onReleaseImport", "onUpgrade", "onRename", "onAuthorAdded", "onAuthorDelete", "onBookDelete", "onBookFileDelete", "onBookFileDeleteForUpgrade", "onHealthIssue", "onDownloadFailure", "onImportFailure", "onBookRetag", "onApplicationUpdate", "supportsOnGrab", "supportsOnReleaseImport", "supportsOnUpgrade", "supportsOnRename", "supportsOnAuthorAdded", "supportsOnAuthorDelete", "supportsOnBookDelete", "supportsOnBookFileDelete", "supportsOnBookFileDeleteForUpgrade", "supportsOnHealthIssue", "includeHealthWarnings", "supportsOnDownloadFailure", "supportsOnImportFailure", "supportsOnBookRetag", "supportsOnApplicationUpdate", "testCommand"]
 
     class Config:
         allow_population_by_field_name = True
@@ -180,6 +182,7 @@ class NotificationResource(BaseModel):
             "on_release_import": obj.get("onReleaseImport"),
             "on_upgrade": obj.get("onUpgrade"),
             "on_rename": obj.get("onRename"),
+            "on_author_added": obj.get("onAuthorAdded"),
             "on_author_delete": obj.get("onAuthorDelete"),
             "on_book_delete": obj.get("onBookDelete"),
             "on_book_file_delete": obj.get("onBookFileDelete"),
@@ -193,6 +196,7 @@ class NotificationResource(BaseModel):
             "supports_on_release_import": obj.get("supportsOnReleaseImport"),
             "supports_on_upgrade": obj.get("supportsOnUpgrade"),
             "supports_on_rename": obj.get("supportsOnRename"),
+            "supports_on_author_added": obj.get("supportsOnAuthorAdded"),
             "supports_on_author_delete": obj.get("supportsOnAuthorDelete"),
             "supports_on_book_delete": obj.get("supportsOnBookDelete"),
             "supports_on_book_file_delete": obj.get("supportsOnBookFileDelete"),
