@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**create_book**](BookApi.md#create_book) | **POST** /api/v1/book | 
 [**delete_book**](BookApi.md#delete_book) | **DELETE** /api/v1/book/{id} | 
 [**get_book_by_id**](BookApi.md#get_book_by_id) | **GET** /api/v1/book/{id} | 
-[**get_bookid_overview**](BookApi.md#get_bookid_overview) | **GET** /api/v1/book/{id}/overview | 
+[**get_book_overview**](BookApi.md#get_book_overview) | **GET** /api/v1/book/{id}/overview | 
 [**list_book**](BookApi.md#list_book) | **GET** /api/v1/book | 
 [**put_book_monitor**](BookApi.md#put_book_monitor) | **PUT** /api/v1/book/monitor | 
 [**update_book**](BookApi.md#update_book) | **PUT** /api/v1/book/{id} | 
@@ -384,8 +384,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_bookid_overview**
-> get_bookid_overview(id)
+# **get_book_overview**
+> get_book_overview(id)
 
 
 
@@ -429,9 +429,9 @@ with readarr.ApiClient(configuration) as api_client:
     id = 56 # int | 
 
     try:
-        api_instance.get_bookid_overview(id)
+        api_instance.get_book_overview(id)
     except Exception as e:
-        print("Exception when calling BookApi->get_bookid_overview: %s\n" % e)
+        print("Exception when calling BookApi->get_book_overview: %s\n" % e)
 ```
 
 * Api Key Authentication (X-Api-Key):
@@ -472,9 +472,9 @@ with readarr.ApiClient(configuration) as api_client:
     id = 56 # int | 
 
     try:
-        api_instance.get_bookid_overview(id)
+        api_instance.get_book_overview(id)
     except Exception as e:
-        print("Exception when calling BookApi->get_bookid_overview: %s\n" % e)
+        print("Exception when calling BookApi->get_book_overview: %s\n" % e)
 ```
 
 ### Parameters

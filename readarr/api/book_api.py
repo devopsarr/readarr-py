@@ -482,13 +482,13 @@ class BookApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def get_bookid_overview(self, id : StrictInt, **kwargs) -> None:  # noqa: E501
-        """get_bookid_overview  # noqa: E501
+    def get_book_overview(self, id : StrictInt, **kwargs) -> None:  # noqa: E501
+        """get_book_overview  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_bookid_overview(id, async_req=True)
+        >>> thread = api.get_book_overview(id, async_req=True)
         >>> result = thread.get()
 
         :param id: (required)
@@ -509,16 +509,16 @@ class BookApi(object):
         :rtype: None
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_bookid_overview_with_http_info(id, **kwargs)  # noqa: E501
+        return self.get_book_overview_with_http_info(id, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def get_bookid_overview_with_http_info(self, id : StrictInt, **kwargs):  # noqa: E501
-        """get_bookid_overview  # noqa: E501
+    def get_book_overview_with_http_info(self, id : StrictInt, **kwargs):  # noqa: E501
+        """get_book_overview  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_bookid_overview_with_http_info(id, async_req=True)
+        >>> thread = api.get_book_overview_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
         :param id: (required)
@@ -569,7 +569,7 @@ class BookApi(object):
             if _key not in _all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_bookid_overview" % _key
+                    " to method get_book_overview" % _key
                 )
             _params[_key] = _val
         del _params['kwargs']

@@ -121,7 +121,7 @@ Class | Method | HTTP request | Description
 *BookApi* | [**create_book**](docs/BookApi.md#create_book) | **POST** /api/v1/book | 
 *BookApi* | [**delete_book**](docs/BookApi.md#delete_book) | **DELETE** /api/v1/book/{id} | 
 *BookApi* | [**get_book_by_id**](docs/BookApi.md#get_book_by_id) | **GET** /api/v1/book/{id} | 
-*BookApi* | [**get_bookid_overview**](docs/BookApi.md#get_bookid_overview) | **GET** /api/v1/book/{id}/overview | 
+*BookApi* | [**get_book_overview**](docs/BookApi.md#get_book_overview) | **GET** /api/v1/book/{id}/overview | 
 *BookApi* | [**list_book**](docs/BookApi.md#list_book) | **GET** /api/v1/book | 
 *BookApi* | [**put_book_monitor**](docs/BookApi.md#put_book_monitor) | **PUT** /api/v1/book/monitor | 
 *BookApi* | [**update_book**](docs/BookApi.md#update_book) | **PUT** /api/v1/book/{id} | 
@@ -229,8 +229,8 @@ Class | Method | HTTP request | Description
 *LogFileApi* | [**list_log_file**](docs/LogFileApi.md#list_log_file) | **GET** /api/v1/log/file | 
 *ManualImportApi* | [**create_manual_import**](docs/ManualImportApi.md#create_manual_import) | **POST** /api/v1/manualimport | 
 *ManualImportApi* | [**list_manual_import**](docs/ManualImportApi.md#list_manual_import) | **GET** /api/v1/manualimport | 
-*MediaCoverApi* | [**get_media_cover_authorauthor_id_by_filename**](docs/MediaCoverApi.md#get_media_cover_authorauthor_id_by_filename) | **GET** /api/v1/mediacover/author/{authorId}/{filename} | 
-*MediaCoverApi* | [**get_media_cover_bookbook_id_by_filename**](docs/MediaCoverApi.md#get_media_cover_bookbook_id_by_filename) | **GET** /api/v1/mediacover/book/{bookId}/{filename} | 
+*MediaCoverApi* | [**get_media_cover_author_by_filename**](docs/MediaCoverApi.md#get_media_cover_author_by_filename) | **GET** /api/v1/mediacover/author/{authorId}/{filename} | 
+*MediaCoverApi* | [**get_media_cover_book_by_filename**](docs/MediaCoverApi.md#get_media_cover_book_by_filename) | **GET** /api/v1/mediacover/book/{bookId}/{filename} | 
 *MediaManagementConfigApi* | [**get_media_management_config**](docs/MediaManagementConfigApi.md#get_media_management_config) | **GET** /api/v1/config/mediamanagement | 
 *MediaManagementConfigApi* | [**get_media_management_config_by_id**](docs/MediaManagementConfigApi.md#get_media_management_config_by_id) | **GET** /api/v1/config/mediamanagement/{id} | 
 *MediaManagementConfigApi* | [**update_media_management_config**](docs/MediaManagementConfigApi.md#update_media_management_config) | **PUT** /api/v1/config/mediamanagement/{id} | 
