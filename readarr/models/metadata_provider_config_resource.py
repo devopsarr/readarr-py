@@ -17,7 +17,7 @@ import re  # noqa: F401
 import json
 
 
-from typing import Optional
+from typing import Any, Dict, Optional
 from pydantic import BaseModel
 from readarr.models.write_audio_tags_type import WriteAudioTagsType
 from readarr.models.write_book_tags_type import WriteBookTagsType
