@@ -17,7 +17,7 @@ import re  # noqa: F401
 import json
 
 
-from typing import Optional
+from typing import Any, Dict, Optional
 from pydantic import BaseModel
 from readarr.models.authentication_type import AuthenticationType
 from readarr.models.certificate_validation_type import CertificateValidationType

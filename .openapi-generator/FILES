@@ -465,6 +465,7 @@ readarr/models/update_mechanism.py
 readarr/models/update_resource.py
 readarr/models/write_audio_tags_type.py
 readarr/models/write_book_tags_type.py
+readarr/py.typed
 readarr/rest.py
 setup.cfg
 setup.py
