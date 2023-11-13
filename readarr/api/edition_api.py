@@ -17,7 +17,7 @@ import re  # noqa: F401
 from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
-from pydantic import StrictInt, conlist
+from pydantic import StrictInt
 
 from typing import List, Optional
 
@@ -43,7 +43,7 @@ class EditionApi(object):
         self.api_client = api_client
 
     @validate_arguments
-    def list_edition(self, book_id : Optional[conlist(StrictInt)] = None, **kwargs) -> List[EditionResource]:  # noqa: E501
+    def list_edition(self, book_id : Optional[List[StrictInt]] = None, **kwargs) -> List[EditionResource]:  # noqa: E501
         """list_edition  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -73,7 +73,7 @@ class EditionApi(object):
         return self.list_edition_with_http_info(book_id, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def list_edition_with_http_info(self, book_id : Optional[conlist(StrictInt)] = None, **kwargs):  # noqa: E501
+    def list_edition_with_http_info(self, book_id : Optional[List[StrictInt]] = None, **kwargs):  # noqa: E501
         """list_edition  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
