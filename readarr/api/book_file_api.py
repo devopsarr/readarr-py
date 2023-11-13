@@ -17,7 +17,7 @@ import re  # noqa: F401
 from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
-from pydantic import StrictBool, StrictInt, StrictStr, conlist
+from pydantic import StrictBool, StrictInt, StrictStr
 
 from typing import List, Optional
 
@@ -462,7 +462,7 @@ class BookFileApi(object):
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def list_book_file(self, author_id : Optional[StrictInt] = None, book_file_ids : Optional[conlist(StrictInt)] = None, book_id : Optional[conlist(StrictInt)] = None, unmapped : Optional[StrictBool] = None, **kwargs) -> List[BookFileResource]:  # noqa: E501
+    def list_book_file(self, author_id : Optional[StrictInt] = None, book_file_ids : Optional[List[StrictInt]] = None, book_id : Optional[List[StrictInt]] = None, unmapped : Optional[StrictBool] = None, **kwargs) -> List[BookFileResource]:  # noqa: E501
         """list_book_file  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
@@ -498,7 +498,7 @@ class BookFileApi(object):
         return self.list_book_file_with_http_info(author_id, book_file_ids, book_id, unmapped, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def list_book_file_with_http_info(self, author_id : Optional[StrictInt] = None, book_file_ids : Optional[conlist(StrictInt)] = None, book_id : Optional[conlist(StrictInt)] = None, unmapped : Optional[StrictBool] = None, **kwargs):  # noqa: E501
+    def list_book_file_with_http_info(self, author_id : Optional[StrictInt] = None, book_file_ids : Optional[List[StrictInt]] = None, book_id : Optional[List[StrictInt]] = None, unmapped : Optional[StrictBool] = None, **kwargs):  # noqa: E501
         """list_book_file  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
