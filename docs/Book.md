@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional] 
 **author_metadata_id** | **int** |  | [optional] 
 **foreign_book_id** | **str** |  | [optional] 
+**foreign_edition_id** | **str** |  | [optional] 
 **title_slug** | **str** |  | [optional] 
 **title** | **str** |  | [optional] 
 **release_date** | **datetime** |  | [optional] 
