@@ -113,7 +113,6 @@ from readarr.models.monitoring_options import MonitoringOptions
 from readarr.models.naming_config_resource import NamingConfigResource
 from readarr.models.new_item_monitor_types import NewItemMonitorTypes
 from readarr.models.notification_resource import NotificationResource
-from readarr.models.paging_resource_filter import PagingResourceFilter
 from readarr.models.parse_resource import ParseResource
 from readarr.models.parsed_book_info import ParsedBookInfo
 from readarr.models.parsed_track_info import ParsedTrackInfo
