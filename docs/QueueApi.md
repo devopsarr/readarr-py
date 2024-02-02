@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **delete_queue**
-> delete_queue(id, remove_from_client=remove_from_client, blocklist=blocklist, skip_redownload=skip_redownload, change_category=change_category)
+> delete_queue(id, remove_from_client=remove_from_client, blocklist=blocklist, skip_redownload=skip_redownload)
 
 
 
@@ -55,10 +55,9 @@ with readarr.ApiClient(configuration) as api_client:
     remove_from_client = True # bool |  (optional) (default to True)
     blocklist = False # bool |  (optional) (default to False)
     skip_redownload = False # bool |  (optional) (default to False)
-    change_category = False # bool |  (optional) (default to False)
 
     try:
-        api_instance.delete_queue(id, remove_from_client=remove_from_client, blocklist=blocklist, skip_redownload=skip_redownload, change_category=change_category)
+        api_instance.delete_queue(id, remove_from_client=remove_from_client, blocklist=blocklist, skip_redownload=skip_redownload)
     except Exception as e:
         print("Exception when calling QueueApi->delete_queue: %s\n" % e)
 ```
@@ -102,10 +101,9 @@ with readarr.ApiClient(configuration) as api_client:
     remove_from_client = True # bool |  (optional) (default to True)
     blocklist = False # bool |  (optional) (default to False)
     skip_redownload = False # bool |  (optional) (default to False)
-    change_category = False # bool |  (optional) (default to False)
 
     try:
-        api_instance.delete_queue(id, remove_from_client=remove_from_client, blocklist=blocklist, skip_redownload=skip_redownload, change_category=change_category)
+        api_instance.delete_queue(id, remove_from_client=remove_from_client, blocklist=blocklist, skip_redownload=skip_redownload)
     except Exception as e:
         print("Exception when calling QueueApi->delete_queue: %s\n" % e)
 ```
@@ -118,7 +116,6 @@ Name | Type | Description  | Notes
  **remove_from_client** | **bool**|  | [optional] [default to True]
  **blocklist** | **bool**|  | [optional] [default to False]
  **skip_redownload** | **bool**|  | [optional] [default to False]
- **change_category** | **bool**|  | [optional] [default to False]
 
 ### Return type
 
@@ -141,7 +138,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_queue_bulk**
-> delete_queue_bulk(remove_from_client=remove_from_client, blocklist=blocklist, skip_redownload=skip_redownload, change_category=change_category, queue_bulk_resource=queue_bulk_resource)
+> delete_queue_bulk(remove_from_client=remove_from_client, blocklist=blocklist, skip_redownload=skip_redownload, queue_bulk_resource=queue_bulk_resource)
 
 
 
@@ -185,11 +182,10 @@ with readarr.ApiClient(configuration) as api_client:
     remove_from_client = True # bool |  (optional) (default to True)
     blocklist = False # bool |  (optional) (default to False)
     skip_redownload = False # bool |  (optional) (default to False)
-    change_category = False # bool |  (optional) (default to False)
     queue_bulk_resource = readarr.QueueBulkResource() # QueueBulkResource |  (optional)
 
     try:
-        api_instance.delete_queue_bulk(remove_from_client=remove_from_client, blocklist=blocklist, skip_redownload=skip_redownload, change_category=change_category, queue_bulk_resource=queue_bulk_resource)
+        api_instance.delete_queue_bulk(remove_from_client=remove_from_client, blocklist=blocklist, skip_redownload=skip_redownload, queue_bulk_resource=queue_bulk_resource)
     except Exception as e:
         print("Exception when calling QueueApi->delete_queue_bulk: %s\n" % e)
 ```
@@ -232,11 +228,10 @@ with readarr.ApiClient(configuration) as api_client:
     remove_from_client = True # bool |  (optional) (default to True)
     blocklist = False # bool |  (optional) (default to False)
     skip_redownload = False # bool |  (optional) (default to False)
-    change_category = False # bool |  (optional) (default to False)
     queue_bulk_resource = readarr.QueueBulkResource() # QueueBulkResource |  (optional)
 
     try:
-        api_instance.delete_queue_bulk(remove_from_client=remove_from_client, blocklist=blocklist, skip_redownload=skip_redownload, change_category=change_category, queue_bulk_resource=queue_bulk_resource)
+        api_instance.delete_queue_bulk(remove_from_client=remove_from_client, blocklist=blocklist, skip_redownload=skip_redownload, queue_bulk_resource=queue_bulk_resource)
     except Exception as e:
         print("Exception when calling QueueApi->delete_queue_bulk: %s\n" % e)
 ```
@@ -248,7 +243,6 @@ Name | Type | Description  | Notes
  **remove_from_client** | **bool**|  | [optional] [default to True]
  **blocklist** | **bool**|  | [optional] [default to False]
  **skip_redownload** | **bool**|  | [optional] [default to False]
- **change_category** | **bool**|  | [optional] [default to False]
  **queue_bulk_resource** | [**QueueBulkResource**](QueueBulkResource.md)|  | [optional] 
 
 ### Return type
@@ -272,7 +266,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_queue**
-> QueueResourcePagingResource get_queue(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction, include_unknown_author_items=include_unknown_author_items, include_author=include_author, include_book=include_book)
+> QueueResourcePagingResource get_queue(include_unknown_author_items=include_unknown_author_items, include_author=include_author, include_book=include_book)
 
 
 
@@ -313,16 +307,12 @@ configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 with readarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = readarr.QueueApi(api_client)
-    page = 1 # int |  (optional) (default to 1)
-    page_size = 10 # int |  (optional) (default to 10)
-    sort_key = 'sort_key_example' # str |  (optional)
-    sort_direction = readarr.SortDirection() # SortDirection |  (optional)
     include_unknown_author_items = False # bool |  (optional) (default to False)
     include_author = False # bool |  (optional) (default to False)
     include_book = False # bool |  (optional) (default to False)
 
     try:
-        api_response = api_instance.get_queue(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction, include_unknown_author_items=include_unknown_author_items, include_author=include_author, include_book=include_book)
+        api_response = api_instance.get_queue(include_unknown_author_items=include_unknown_author_items, include_author=include_author, include_book=include_book)
         print("The response of QueueApi->get_queue:\n")
         pprint(api_response)
     except Exception as e:
@@ -364,16 +354,12 @@ configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 with readarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = readarr.QueueApi(api_client)
-    page = 1 # int |  (optional) (default to 1)
-    page_size = 10 # int |  (optional) (default to 10)
-    sort_key = 'sort_key_example' # str |  (optional)
-    sort_direction = readarr.SortDirection() # SortDirection |  (optional)
     include_unknown_author_items = False # bool |  (optional) (default to False)
     include_author = False # bool |  (optional) (default to False)
     include_book = False # bool |  (optional) (default to False)
 
     try:
-        api_response = api_instance.get_queue(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction, include_unknown_author_items=include_unknown_author_items, include_author=include_author, include_book=include_book)
+        api_response = api_instance.get_queue(include_unknown_author_items=include_unknown_author_items, include_author=include_author, include_book=include_book)
         print("The response of QueueApi->get_queue:\n")
         pprint(api_response)
     except Exception as e:
@@ -384,10 +370,6 @@ with readarr.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **int**|  | [optional] [default to 1]
- **page_size** | **int**|  | [optional] [default to 10]
- **sort_key** | **str**|  | [optional] 
- **sort_direction** | [**SortDirection**](.md)|  | [optional] 
  **include_unknown_author_items** | **bool**|  | [optional] [default to False]
  **include_author** | **bool**|  | [optional] [default to False]
  **include_book** | **bool**|  | [optional] [default to False]
@@ -403,7 +385,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |

@@ -17,13 +17,12 @@ import re  # noqa: F401
 from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
-from pydantic import StrictBool, StrictInt, StrictStr
+from pydantic import StrictBool, StrictInt
 
 from typing import Optional
 
 from readarr.models.book_resource import BookResource
 from readarr.models.book_resource_paging_resource import BookResourcePagingResource
-from readarr.models.sort_direction import SortDirection
 
 from readarr.api_client import ApiClient
 from readarr.exceptions import (  # noqa: F401
@@ -45,27 +44,17 @@ class CutoffApi(object):
         self.api_client = api_client
 
     @validate_arguments
-    def get_wanted_cutoff(self, page : Optional[StrictInt] = None, page_size : Optional[StrictInt] = None, sort_key : Optional[StrictStr] = None, sort_direction : Optional[SortDirection] = None, include_author : Optional[StrictBool] = None, monitored : Optional[StrictBool] = None, **kwargs) -> BookResourcePagingResource:  # noqa: E501
+    def get_wanted_cutoff(self, include_author : Optional[StrictBool] = None, **kwargs) -> BookResourcePagingResource:  # noqa: E501
         """get_wanted_cutoff  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_wanted_cutoff(page, page_size, sort_key, sort_direction, include_author, monitored, async_req=True)
+        >>> thread = api.get_wanted_cutoff(include_author, async_req=True)
         >>> result = thread.get()
 
-        :param page:
-        :type page: int
-        :param page_size:
-        :type page_size: int
-        :param sort_key:
-        :type sort_key: str
-        :param sort_direction:
-        :type sort_direction: SortDirection
         :param include_author:
         :type include_author: bool
-        :param monitored:
-        :type monitored: bool
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -82,30 +71,20 @@ class CutoffApi(object):
         :rtype: BookResourcePagingResource
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_wanted_cutoff_with_http_info(page, page_size, sort_key, sort_direction, include_author, monitored, **kwargs)  # noqa: E501
+        return self.get_wanted_cutoff_with_http_info(include_author, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def get_wanted_cutoff_with_http_info(self, page : Optional[StrictInt] = None, page_size : Optional[StrictInt] = None, sort_key : Optional[StrictStr] = None, sort_direction : Optional[SortDirection] = None, include_author : Optional[StrictBool] = None, monitored : Optional[StrictBool] = None, **kwargs):  # noqa: E501
+    def get_wanted_cutoff_with_http_info(self, include_author : Optional[StrictBool] = None, **kwargs):  # noqa: E501
         """get_wanted_cutoff  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.get_wanted_cutoff_with_http_info(page, page_size, sort_key, sort_direction, include_author, monitored, async_req=True)
+        >>> thread = api.get_wanted_cutoff_with_http_info(include_author, async_req=True)
         >>> result = thread.get()
 
-        :param page:
-        :type page: int
-        :param page_size:
-        :type page_size: int
-        :param sort_key:
-        :type sort_key: str
-        :param sort_direction:
-        :type sort_direction: SortDirection
         :param include_author:
         :type include_author: bool
-        :param monitored:
-        :type monitored: bool
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _return_http_data_only: response data without head status code
@@ -133,12 +112,7 @@ class CutoffApi(object):
         _params = locals()
 
         _all_params = [
-            'page',
-            'page_size',
-            'sort_key',
-            'sort_direction',
-            'include_author',
-            'monitored'
+            'include_author'
         ]
         _all_params.extend(
             [
@@ -169,18 +143,8 @@ class CutoffApi(object):
 
         # process the query parameters
         _query_params = []
-        if _params.get('page') is not None:  # noqa: E501
-            _query_params.append(('page', _params['page']))
-        if _params.get('page_size') is not None:  # noqa: E501
-            _query_params.append(('pageSize', _params['page_size']))
-        if _params.get('sort_key') is not None:  # noqa: E501
-            _query_params.append(('sortKey', _params['sort_key']))
-        if _params.get('sort_direction') is not None:  # noqa: E501
-            _query_params.append(('sortDirection', _params['sort_direction']))
         if _params.get('include_author') is not None:  # noqa: E501
             _query_params.append(('includeAuthor', _params['include_author']))
-        if _params.get('monitored') is not None:  # noqa: E501
-            _query_params.append(('monitored', _params['monitored']))
 
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))

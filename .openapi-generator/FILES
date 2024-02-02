@@ -145,6 +145,7 @@ docs/NamingConfigResource.md
 docs/NewItemMonitorTypes.md
 docs/NotificationApi.md
 docs/NotificationResource.md
+docs/PagingResourceFilter.md
 docs/ParseApi.md
 docs/ParseResource.md
 docs/ParsedBookInfo.md
@@ -406,6 +407,7 @@ readarr/models/monitoring_options.py
 readarr/models/naming_config_resource.py
 readarr/models/new_item_monitor_types.py
 readarr/models/notification_resource.py
+readarr/models/paging_resource_filter.py
 readarr/models/parse_resource.py
 readarr/models/parsed_book_info.py
 readarr/models/parsed_track_info.py

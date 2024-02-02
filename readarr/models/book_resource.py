@@ -41,7 +41,6 @@ class BookResource(BaseModel):
     overview: Optional[str]
     author_id: Optional[int]
     foreign_book_id: Optional[str]
-    foreign_edition_id: Optional[str]
     title_slug: Optional[str]
     monitored: Optional[bool]
     any_edition_ok: Optional[bool]
@@ -58,7 +57,7 @@ class BookResource(BaseModel):
     remote_cover: Optional[str]
     editions: Optional[List]
     grabbed: Optional[bool]
-    __properties = ["id", "title", "authorTitle", "seriesTitle", "disambiguation", "overview", "authorId", "foreignBookId", "foreignEditionId", "titleSlug", "monitored", "anyEditionOk", "ratings", "releaseDate", "pageCount", "genres", "author", "images", "links", "statistics", "added", "addOptions", "remoteCover", "editions", "grabbed"]
+    __properties = ["id", "title", "authorTitle", "seriesTitle", "disambiguation", "overview", "authorId", "foreignBookId", "titleSlug", "monitored", "anyEditionOk", "ratings", "releaseDate", "pageCount", "genres", "author", "images", "links", "statistics", "added", "addOptions", "remoteCover", "editions", "grabbed"]
 
     class Config:
         allow_population_by_field_name = True
@@ -144,10 +143,6 @@ class BookResource(BaseModel):
         if self.foreign_book_id is None:
             _dict['foreignBookId'] = None
 
-        # set to None if foreign_edition_id (nullable) is None
-        if self.foreign_edition_id is None:
-            _dict['foreignEditionId'] = None
-
         # set to None if title_slug (nullable) is None
         if self.title_slug is None:
             _dict['titleSlug'] = None
@@ -200,7 +195,6 @@ class BookResource(BaseModel):
             "overview": obj.get("overview"),
             "author_id": obj.get("authorId"),
             "foreign_book_id": obj.get("foreignBookId"),
-            "foreign_edition_id": obj.get("foreignEditionId"),
             "title_slug": obj.get("titleSlug"),
             "monitored": obj.get("monitored"),
             "any_edition_ok": obj.get("anyEditionOk"),
