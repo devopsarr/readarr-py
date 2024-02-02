@@ -248,7 +248,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_blocklist**
-> BlocklistResourcePagingResource get_blocklist(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction)
+> BlocklistResourcePagingResource get_blocklist()
 
 
 
@@ -289,13 +289,9 @@ configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 with readarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = readarr.BlocklistApi(api_client)
-    page = 1 # int |  (optional) (default to 1)
-    page_size = 10 # int |  (optional) (default to 10)
-    sort_key = 'sort_key_example' # str |  (optional)
-    sort_direction = readarr.SortDirection() # SortDirection |  (optional)
 
     try:
-        api_response = api_instance.get_blocklist(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction)
+        api_response = api_instance.get_blocklist()
         print("The response of BlocklistApi->get_blocklist:\n")
         pprint(api_response)
     except Exception as e:
@@ -337,13 +333,9 @@ configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 with readarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = readarr.BlocklistApi(api_client)
-    page = 1 # int |  (optional) (default to 1)
-    page_size = 10 # int |  (optional) (default to 10)
-    sort_key = 'sort_key_example' # str |  (optional)
-    sort_direction = readarr.SortDirection() # SortDirection |  (optional)
 
     try:
-        api_response = api_instance.get_blocklist(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction)
+        api_response = api_instance.get_blocklist()
         print("The response of BlocklistApi->get_blocklist:\n")
         pprint(api_response)
     except Exception as e:
@@ -351,13 +343,7 @@ with readarr.ApiClient(configuration) as api_client:
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **int**|  | [optional] [default to 1]
- **page_size** | **int**|  | [optional] [default to 10]
- **sort_key** | **str**|  | [optional] 
- **sort_direction** | [**SortDirection**](.md)|  | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -370,7 +356,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json
+ - **Accept**: text/plain, application/json, text/json
 
 ### HTTP response details
 | Status code | Description | Response headers |

@@ -55,11 +55,10 @@ class QueueResource(BaseModel):
     download_id: Optional[str]
     protocol: Optional[DownloadProtocol]
     download_client: Optional[str]
-    download_client_has_post_import_category: Optional[bool]
     indexer: Optional[str]
     output_path: Optional[str]
     download_forced: Optional[bool]
-    __properties = ["id", "authorId", "bookId", "author", "book", "quality", "customFormats", "customFormatScore", "size", "title", "sizeleft", "timeleft", "estimatedCompletionTime", "status", "trackedDownloadStatus", "trackedDownloadState", "statusMessages", "errorMessage", "downloadId", "protocol", "downloadClient", "downloadClientHasPostImportCategory", "indexer", "outputPath", "downloadForced"]
+    __properties = ["id", "authorId", "bookId", "author", "book", "quality", "customFormats", "customFormatScore", "size", "title", "sizeleft", "timeleft", "estimatedCompletionTime", "status", "trackedDownloadStatus", "trackedDownloadState", "statusMessages", "errorMessage", "downloadId", "protocol", "downloadClient", "indexer", "outputPath", "downloadForced"]
 
     class Config:
         allow_population_by_field_name = True
@@ -192,7 +191,6 @@ class QueueResource(BaseModel):
             "download_id": obj.get("downloadId"),
             "protocol": obj.get("protocol"),
             "download_client": obj.get("downloadClient"),
-            "download_client_has_post_import_category": obj.get("downloadClientHasPostImportCategory"),
             "indexer": obj.get("indexer"),
             "output_path": obj.get("outputPath"),
             "download_forced": obj.get("downloadForced")
