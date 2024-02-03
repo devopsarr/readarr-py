@@ -42,6 +42,8 @@ Name | Type | Description | Notes
 **protocol** | [**DownloadProtocol**](DownloadProtocol.md) |  | [optional] 
 **author_id** | **int** |  | [optional] 
 **book_id** | **int** |  | [optional] 
+**download_client_id** | **int** |  | [optional] 
+**download_client** | **str** |  | [optional] 
 
 ## Example
 
