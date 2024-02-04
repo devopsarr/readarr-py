@@ -130,7 +130,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_history**
-> HistoryResourcePagingResource get_history(include_author=include_author, include_book=include_book)
+> HistoryResourcePagingResource get_history(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction, include_author=include_author, include_book=include_book, event_type=event_type, book_id=book_id, download_id=download_id)
 
 
 
@@ -171,11 +171,18 @@ configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 with readarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = readarr.HistoryApi(api_client)
-    include_author = False # bool |  (optional) (default to False)
-    include_book = False # bool |  (optional) (default to False)
+    page = 1 # int |  (optional) (default to 1)
+    page_size = 10 # int |  (optional) (default to 10)
+    sort_key = 'sort_key_example' # str |  (optional)
+    sort_direction = readarr.SortDirection() # SortDirection |  (optional)
+    include_author = True # bool |  (optional)
+    include_book = True # bool |  (optional)
+    event_type = [56] # List[int] |  (optional)
+    book_id = 56 # int |  (optional)
+    download_id = 'download_id_example' # str |  (optional)
 
     try:
-        api_response = api_instance.get_history(include_author=include_author, include_book=include_book)
+        api_response = api_instance.get_history(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction, include_author=include_author, include_book=include_book, event_type=event_type, book_id=book_id, download_id=download_id)
         print("The response of HistoryApi->get_history:\n")
         pprint(api_response)
     except Exception as e:
@@ -217,11 +224,18 @@ configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
 with readarr.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = readarr.HistoryApi(api_client)
-    include_author = False # bool |  (optional) (default to False)
-    include_book = False # bool |  (optional) (default to False)
+    page = 1 # int |  (optional) (default to 1)
+    page_size = 10 # int |  (optional) (default to 10)
+    sort_key = 'sort_key_example' # str |  (optional)
+    sort_direction = readarr.SortDirection() # SortDirection |  (optional)
+    include_author = True # bool |  (optional)
+    include_book = True # bool |  (optional)
+    event_type = [56] # List[int] |  (optional)
+    book_id = 56 # int |  (optional)
+    download_id = 'download_id_example' # str |  (optional)
 
     try:
-        api_response = api_instance.get_history(include_author=include_author, include_book=include_book)
+        api_response = api_instance.get_history(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction, include_author=include_author, include_book=include_book, event_type=event_type, book_id=book_id, download_id=download_id)
         print("The response of HistoryApi->get_history:\n")
         pprint(api_response)
     except Exception as e:
@@ -232,8 +246,15 @@ with readarr.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **include_author** | **bool**|  | [optional] [default to False]
- **include_book** | **bool**|  | [optional] [default to False]
+ **page** | **int**|  | [optional] [default to 1]
+ **page_size** | **int**|  | [optional] [default to 10]
+ **sort_key** | **str**|  | [optional] 
+ **sort_direction** | [**SortDirection**](.md)|  | [optional] 
+ **include_author** | **bool**|  | [optional] 
+ **include_book** | **bool**|  | [optional] 
+ **event_type** | [**List[int]**](int.md)|  | [optional] 
+ **book_id** | **int**|  | [optional] 
+ **download_id** | **str**|  | [optional] 
 
 ### Return type
 
@@ -246,7 +267,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |

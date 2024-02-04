@@ -67,7 +67,9 @@ class ReleaseResource(BaseModel):
     protocol: Optional[DownloadProtocol]
     author_id: Optional[int]
     book_id: Optional[int]
-    __properties = ["id", "guid", "quality", "qualityWeight", "age", "ageHours", "ageMinutes", "size", "indexerId", "indexer", "releaseGroup", "subGroup", "releaseHash", "title", "discography", "sceneSource", "airDate", "authorName", "bookTitle", "approved", "temporarilyRejected", "rejected", "rejections", "publishDate", "commentUrl", "downloadUrl", "infoUrl", "downloadAllowed", "releaseWeight", "customFormats", "customFormatScore", "magnetUrl", "infoHash", "seeders", "leechers", "protocol", "authorId", "bookId"]
+    download_client_id: Optional[int]
+    download_client: Optional[str]
+    __properties = ["id", "guid", "quality", "qualityWeight", "age", "ageHours", "ageMinutes", "size", "indexerId", "indexer", "releaseGroup", "subGroup", "releaseHash", "title", "discography", "sceneSource", "airDate", "authorName", "bookTitle", "approved", "temporarilyRejected", "rejected", "rejections", "publishDate", "commentUrl", "downloadUrl", "infoUrl", "downloadAllowed", "releaseWeight", "customFormats", "customFormatScore", "magnetUrl", "infoHash", "seeders", "leechers", "protocol", "authorId", "bookId", "downloadClientId", "downloadClient"]
 
     class Config:
         allow_population_by_field_name = True
@@ -186,6 +188,14 @@ class ReleaseResource(BaseModel):
         if self.book_id is None:
             _dict['bookId'] = None
 
+        # set to None if download_client_id (nullable) is None
+        if self.download_client_id is None:
+            _dict['downloadClientId'] = None
+
+        # set to None if download_client (nullable) is None
+        if self.download_client is None:
+            _dict['downloadClient'] = None
+
         return _dict
 
     @classmethod
@@ -235,7 +245,9 @@ class ReleaseResource(BaseModel):
             "leechers": obj.get("leechers"),
             "protocol": obj.get("protocol"),
             "author_id": obj.get("authorId"),
-            "book_id": obj.get("bookId")
+            "book_id": obj.get("bookId"),
+            "download_client_id": obj.get("downloadClientId"),
+            "download_client": obj.get("downloadClient")
         })
         return _obj
 

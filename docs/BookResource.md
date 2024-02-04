@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **overview** | **str** |  | [optional] 
 **author_id** | **int** |  | [optional] 
 **foreign_book_id** | **str** |  | [optional] 
+**foreign_edition_id** | **str** |  | [optional] 
 **title_slug** | **str** |  | [optional] 
 **monitored** | **bool** |  | [optional] 
 **any_edition_ok** | **bool** |  | [optional] 
