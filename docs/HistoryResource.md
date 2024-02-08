@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **var_date** | **datetime** |  | [optional] 
 **download_id** | **str** |  | [optional] 
 **event_type** | [**EntityHistoryEventType**](EntityHistoryEventType.md) |  | [optional] 
-**data** | **Dict[str, str]** |  | [optional] 
+**data** | **Dict[str, Optional[str]]** |  | [optional] 
 **book** | [**BookResource**](BookResource.md) |  | [optional] 
 **author** | [**AuthorResource**](AuthorResource.md) |  | [optional] 
 

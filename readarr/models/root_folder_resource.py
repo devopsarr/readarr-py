@@ -17,7 +17,7 @@ import re  # noqa: F401
 import json
 
 
-from typing import Any, ClassVar, Dict, List, Optional
+
 from pydantic import BaseModel
 from readarr.models.monitor_types import MonitorTypes
 from readarr.models.new_item_monitor_types import NewItemMonitorTypes

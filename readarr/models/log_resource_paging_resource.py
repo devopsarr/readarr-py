@@ -17,7 +17,7 @@ import re  # noqa: F401
 import json
 
 
-from typing import Any, ClassVar, Dict, List, Optional
+
 from pydantic import BaseModel
 from readarr.models.log_resource import LogResource
 from readarr.models.sort_direction import SortDirection

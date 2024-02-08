@@ -18,9 +18,7 @@ from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
 from pydantic import StrictInt
-
 from typing import Optional
-
 from readarr.models.queue_bulk_resource import QueueBulkResource
 
 from readarr.api_client import ApiClient

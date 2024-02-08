@@ -17,7 +17,7 @@ import re  # noqa: F401
 import json
 
 
-from typing import Any, ClassVar, Dict, Optional
+
 from pydantic import BaseModel
 from readarr.models.allow_fingerprinting import AllowFingerprinting
 from readarr.models.file_date_type import FileDateType

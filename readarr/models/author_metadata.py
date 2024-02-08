@@ -16,8 +16,8 @@ import pprint
 import re  # noqa: F401
 import json
 
-from datetime import datetime
-from typing import Any, ClassVar, Dict, List, Optional
+
+
 from pydantic import BaseModel
 from readarr.models.author_status_type import AuthorStatusType
 from readarr.models.links import Links

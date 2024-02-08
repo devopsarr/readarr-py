@@ -17,7 +17,7 @@ import re  # noqa: F401
 import json
 
 
-from typing import Any, ClassVar, Dict, List, Optional
+
 from pydantic import BaseModel
 from readarr.models.bookshelf_author_resource import BookshelfAuthorResource
 from readarr.models.monitoring_options import MonitoringOptions

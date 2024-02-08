@@ -18,9 +18,6 @@ from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
 from pydantic import StrictInt
-
-from typing import List
-
 from readarr.models.tag_details_resource import TagDetailsResource
 
 from readarr.api_client import ApiClient

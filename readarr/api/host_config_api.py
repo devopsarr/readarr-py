@@ -18,9 +18,7 @@ from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
 from pydantic import StrictInt, StrictStr
-
 from typing import Optional
-
 from readarr.models.host_config_resource import HostConfigResource
 
 from readarr.api_client import ApiClient
