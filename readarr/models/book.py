@@ -16,8 +16,8 @@ import pprint
 import re  # noqa: F401
 import json
 
-from datetime import datetime
-from typing import Any, ClassVar, Dict, List, Optional
+
+
 from pydantic import BaseModel
 from readarr.models.add_book_options import AddBookOptions
 from readarr.models.author_metadata_lazy_loaded import AuthorMetadataLazyLoaded

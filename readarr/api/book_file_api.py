@@ -18,9 +18,7 @@ from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
 from pydantic import StrictBool, StrictInt, StrictStr
-
 from typing import List, Optional
-
 from readarr.models.book_file_list_resource import BookFileListResource
 from readarr.models.book_file_resource import BookFileResource
 

@@ -18,9 +18,7 @@ from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
 from pydantic import StrictBool, StrictInt, StrictStr
-
 from typing import Optional
-
 from readarr.models.naming_config_resource import NamingConfigResource
 
 from readarr.api_client import ApiClient

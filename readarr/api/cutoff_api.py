@@ -18,9 +18,7 @@ from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
 from pydantic import StrictBool, StrictInt, StrictStr
-
 from typing import Optional
-
 from readarr.models.book_resource import BookResource
 from readarr.models.book_resource_paging_resource import BookResourcePagingResource
 from readarr.models.sort_direction import SortDirection

@@ -18,11 +18,8 @@ from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
 from datetime import datetime
-
 from pydantic import StrictBool, StrictInt
-
-from typing import List, Optional
-
+from typing import Optional
 from readarr.models.book_resource import BookResource
 
 from readarr.api_client import ApiClient

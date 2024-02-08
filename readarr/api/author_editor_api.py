@@ -18,7 +18,6 @@ from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 
 from typing import Optional
-
 from readarr.models.author_editor_resource import AuthorEditorResource
 
 from readarr.api_client import ApiClient

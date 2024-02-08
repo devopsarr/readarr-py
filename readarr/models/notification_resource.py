@@ -17,7 +17,7 @@ import re  # noqa: F401
 import json
 
 
-from typing import Any, ClassVar, Dict, List, Optional
+
 from pydantic import BaseModel
 from readarr.models.field import Field
 from readarr.models.provider_message import ProviderMessage
