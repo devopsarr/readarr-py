@@ -17,60 +17,13 @@ Method | HTTP request | Description
 ### Example
 
 * Api Key Authentication (apikey):
-```python
-from __future__ import print_function
-import time
-import os
-import readarr
-from readarr.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8787
-# See configuration.py for a list of all supported configuration parameters.
-configuration = readarr.Configuration(
-    host = "http://localhost:8787"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: apikey
-configuration.api_key['apikey'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['apikey'] = 'Bearer'
-
-# Configure API key authorization: X-Api-Key
-configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
-
-# Enter a context with an instance of the API client
-with readarr.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = readarr.QueueApi(api_client)
-    id = 56 # int | 
-    remove_from_client = True # bool |  (optional) (default to True)
-    blocklist = False # bool |  (optional) (default to False)
-    skip_redownload = False # bool |  (optional) (default to False)
-    change_category = False # bool |  (optional) (default to False)
-
-    try:
-        api_instance.delete_queue(id, remove_from_client=remove_from_client, blocklist=blocklist, skip_redownload=skip_redownload, change_category=change_category)
-    except Exception as e:
-        print("Exception when calling QueueApi->delete_queue: %s\n" % e)
-```
-
 * Api Key Authentication (X-Api-Key):
+
 ```python
-from __future__ import print_function
-import time
-import os
 import readarr
 from readarr.rest import ApiException
 from pprint import pprint
+
 # Defining the host is optional and defaults to http://localhost:8787
 # See configuration.py for a list of all supported configuration parameters.
 configuration = readarr.Configuration(
@@ -109,8 +62,11 @@ with readarr.ApiClient(configuration) as api_client:
     except Exception as e:
         print("Exception when calling QueueApi->delete_queue: %s\n" % e)
 ```
+
+
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -134,9 +90,10 @@ void (empty response body)
  - **Accept**: Not defined
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+**2XX** | Success |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -148,60 +105,14 @@ void (empty response body)
 ### Example
 
 * Api Key Authentication (apikey):
-```python
-from __future__ import print_function
-import time
-import os
-import readarr
-from readarr.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8787
-# See configuration.py for a list of all supported configuration parameters.
-configuration = readarr.Configuration(
-    host = "http://localhost:8787"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: apikey
-configuration.api_key['apikey'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['apikey'] = 'Bearer'
-
-# Configure API key authorization: X-Api-Key
-configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
-
-# Enter a context with an instance of the API client
-with readarr.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = readarr.QueueApi(api_client)
-    remove_from_client = True # bool |  (optional) (default to True)
-    blocklist = False # bool |  (optional) (default to False)
-    skip_redownload = False # bool |  (optional) (default to False)
-    change_category = False # bool |  (optional) (default to False)
-    queue_bulk_resource = readarr.QueueBulkResource() # QueueBulkResource |  (optional)
-
-    try:
-        api_instance.delete_queue_bulk(remove_from_client=remove_from_client, blocklist=blocklist, skip_redownload=skip_redownload, change_category=change_category, queue_bulk_resource=queue_bulk_resource)
-    except Exception as e:
-        print("Exception when calling QueueApi->delete_queue_bulk: %s\n" % e)
-```
-
 * Api Key Authentication (X-Api-Key):
+
 ```python
-from __future__ import print_function
-import time
-import os
 import readarr
+from readarr.models.queue_bulk_resource import QueueBulkResource
 from readarr.rest import ApiException
 from pprint import pprint
+
 # Defining the host is optional and defaults to http://localhost:8787
 # See configuration.py for a list of all supported configuration parameters.
 configuration = readarr.Configuration(
@@ -240,8 +151,11 @@ with readarr.ApiClient(configuration) as api_client:
     except Exception as e:
         print("Exception when calling QueueApi->delete_queue_bulk: %s\n" % e)
 ```
+
+
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -265,9 +179,10 @@ void (empty response body)
  - **Accept**: Not defined
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+**2XX** | Success |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -279,64 +194,15 @@ void (empty response body)
 ### Example
 
 * Api Key Authentication (apikey):
-```python
-from __future__ import print_function
-import time
-import os
-import readarr
-from readarr.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to http://localhost:8787
-# See configuration.py for a list of all supported configuration parameters.
-configuration = readarr.Configuration(
-    host = "http://localhost:8787"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: apikey
-configuration.api_key['apikey'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['apikey'] = 'Bearer'
-
-# Configure API key authorization: X-Api-Key
-configuration.api_key['X-Api-Key'] = os.environ["API_KEY"]
-
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['X-Api-Key'] = 'Bearer'
-
-# Enter a context with an instance of the API client
-with readarr.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = readarr.QueueApi(api_client)
-    page = 1 # int |  (optional) (default to 1)
-    page_size = 10 # int |  (optional) (default to 10)
-    sort_key = 'sort_key_example' # str |  (optional)
-    sort_direction = readarr.SortDirection() # SortDirection |  (optional)
-    include_unknown_author_items = False # bool |  (optional) (default to False)
-    include_author = False # bool |  (optional) (default to False)
-    include_book = False # bool |  (optional) (default to False)
-
-    try:
-        api_response = api_instance.get_queue(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction, include_unknown_author_items=include_unknown_author_items, include_author=include_author, include_book=include_book)
-        print("The response of QueueApi->get_queue:\n")
-        pprint(api_response)
-    except Exception as e:
-        print("Exception when calling QueueApi->get_queue: %s\n" % e)
-```
-
 * Api Key Authentication (X-Api-Key):
+
 ```python
-from __future__ import print_function
-import time
-import os
 import readarr
+from readarr.models.queue_resource_paging_resource import QueueResourcePagingResource
+from readarr.models.sort_direction import SortDirection
 from readarr.rest import ApiException
 from pprint import pprint
+
 # Defining the host is optional and defaults to http://localhost:8787
 # See configuration.py for a list of all supported configuration parameters.
 configuration = readarr.Configuration(
@@ -379,8 +245,11 @@ with readarr.ApiClient(configuration) as api_client:
     except Exception as e:
         print("Exception when calling QueueApi->get_queue: %s\n" % e)
 ```
+
+
 
 ### Parameters
+
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
@@ -406,9 +275,10 @@ Name | Type | Description  | Notes
  - **Accept**: application/json
 
 ### HTTP response details
+
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Success |  -  |
+**2XX** | Success |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

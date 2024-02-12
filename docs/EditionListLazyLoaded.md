@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **value** | [**List[Edition]**](Edition.md) |  | [optional] [readonly] 

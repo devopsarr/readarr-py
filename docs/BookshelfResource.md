@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **authors** | [**List[BookshelfAuthorResource]**](BookshelfAuthorResource.md) |  | [optional] 
