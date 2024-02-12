@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **add_type** | [**BookAddType**](BookAddType.md) |  | [optional] 

@@ -2,6 +2,7 @@
 
 
 ## Properties
+
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **value** | [**List[BookFile]**](BookFile.md) |  | [optional] [readonly] 
