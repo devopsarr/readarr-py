@@ -1,5 +1,24 @@
 # Changelog
 
+## [1.0.0](https://github.com/devopsarr/readarr-py/compare/v0.4.1...v1.0.0) (2024-02-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* **devopsarr/prowlarr-py#39:** update sdk generator to use pydantic 2.x
+
+### Features
+
+* **devopsarr/prowlarr-py#39:** update sdk generator to use pydantic 2.x ([c843093](https://github.com/devopsarr/readarr-py/commit/c84309355d97898483a95480397a683a2d1dc7be))
+* inject api version into readme ([04617a6](https://github.com/devopsarr/readarr-py/commit/04617a6f95db165cde2c5019297eddcd7386ca9e))
+
+
+### Bug Fixes
+
+* **python:** wrong release versioning on configuration.py ([9d9aa25](https://github.com/devopsarr/readarr-py/commit/9d9aa25049832d8564afcaaae16e9c62483dba8a))
+* release please commented lines ([c0c050d](https://github.com/devopsarr/readarr-py/commit/c0c050def934208468f9d8c927d2df281f941d5c))
+* remove middle elements from method name ([88bee52](https://github.com/devopsarr/readarr-py/commit/88bee52cd5274d42e08d3d98c6e7f85430eca446))
+
 ## [0.4.1](https://github.com/devopsarr/readarr-py/compare/v0.4.0...v0.4.1) (2023-07-21)
 
 
