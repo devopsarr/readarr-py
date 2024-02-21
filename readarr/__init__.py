@@ -144,6 +144,7 @@ from readarr.models.command_resource import CommandResource
 from readarr.models.command_result import CommandResult
 from readarr.models.command_status import CommandStatus
 from readarr.models.command_trigger import CommandTrigger
+from readarr.models.contract_field import ContractField
 from readarr.models.custom_filter_resource import CustomFilterResource
 from readarr.models.custom_format import CustomFormat
 from readarr.models.custom_format_resource import CustomFormatResource
@@ -161,7 +162,6 @@ from readarr.models.edition_lazy_loaded import EditionLazyLoaded
 from readarr.models.edition_list_lazy_loaded import EditionListLazyLoaded
 from readarr.models.edition_resource import EditionResource
 from readarr.models.entity_history_event_type import EntityHistoryEventType
-from readarr.models.field import Field
 from readarr.models.file_date_type import FileDateType
 from readarr.models.health_check_result import HealthCheckResult
 from readarr.models.health_resource import HealthResource
