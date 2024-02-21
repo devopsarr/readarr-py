@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/devopsarr/readarr-py/compare/v1.0.0...v1.0.1) (2024-02-21)
+
+
+### Bug Fixes
+
+* map Field to ContractField to avoid pydantic issue ([6023edc](https://github.com/devopsarr/readarr-py/commit/6023edc3b8a96d27602c1898f881d6353b61b030))
+
 ## [1.0.0](https://github.com/devopsarr/readarr-py/compare/v1.0.0...v1.0.0) (2024-02-20)
 
 
