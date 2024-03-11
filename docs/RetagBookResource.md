@@ -23,7 +23,7 @@ json = "{}"
 # create an instance of RetagBookResource from a JSON string
 retag_book_resource_instance = RetagBookResource.from_json(json)
 # print the JSON string representation of the object
-print RetagBookResource.to_json()
+print(RetagBookResource.to_json())
 
 # convert the object into a dict
 retag_book_resource_dict = retag_book_resource_instance.to_dict()

@@ -26,7 +26,7 @@ json = "{}"
 # create an instance of MetadataProfile from a JSON string
 metadata_profile_instance = MetadataProfile.from_json(json)
 # print the JSON string representation of the object
-print MetadataProfile.to_json()
+print(MetadataProfile.to_json())
 
 # convert the object into a dict
 metadata_profile_dict = metadata_profile_instance.to_dict()

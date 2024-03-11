@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of AuthorTitleInfo from a JSON string
 author_title_info_instance = AuthorTitleInfo.from_json(json)
 # print the JSON string representation of the object
-print AuthorTitleInfo.to_json()
+print(AuthorTitleInfo.to_json())
 
 # convert the object into a dict
 author_title_info_dict = author_title_info_instance.to_dict()

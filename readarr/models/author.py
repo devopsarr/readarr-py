@@ -18,7 +18,7 @@ import re  # noqa: F401
 import json
 
 from datetime import datetime
-from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from readarr.models.add_author_options import AddAuthorOptions
 from readarr.models.author_metadata_lazy_loaded import AuthorMetadataLazyLoaded
@@ -54,11 +54,11 @@ class Author(BaseModel):
     foreign_author_id: Optional[StrictStr] = Field(default=None, alias="foreignAuthorId")
     __properties: ClassVar[List[str]] = ["id", "authorMetadataId", "cleanName", "monitored", "monitorNewItems", "lastInfoSync", "path", "rootFolderPath", "added", "qualityProfileId", "metadataProfileId", "tags", "addOptions", "metadata", "qualityProfile", "metadataProfile", "books", "series", "name", "foreignAuthorId"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

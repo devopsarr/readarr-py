@@ -41,7 +41,7 @@ json = "{}"
 # create an instance of BookResource from a JSON string
 book_resource_instance = BookResource.from_json(json)
 # print the JSON string representation of the object
-print BookResource.to_json()
+print(BookResource.to_json())
 
 # convert the object into a dict
 book_resource_dict = book_resource_instance.to_dict()

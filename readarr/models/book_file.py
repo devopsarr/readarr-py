@@ -18,7 +18,7 @@ import re  # noqa: F401
 import json
 
 from datetime import datetime
-from pydantic import BaseModel, Field, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, Optional
 from readarr.models.media_info_model import MediaInfoModel
 from readarr.models.quality_model import QualityModel
@@ -47,11 +47,11 @@ class BookFile(BaseModel):
     part_count: Optional[StrictInt] = Field(default=None, alias="partCount")
     __properties: ClassVar[List[str]] = ["id", "path", "size", "modified", "dateAdded", "originalFilePath", "sceneName", "releaseGroup", "quality", "mediaInfo", "editionId", "calibreId", "part", "author", "edition", "partCount"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

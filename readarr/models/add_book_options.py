@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictBool
+from pydantic import BaseModel, ConfigDict, Field, StrictBool
 from typing import Any, ClassVar, Dict, Optional
 from readarr.models.book_add_type import BookAddType
 from typing import Optional, Set
@@ -31,11 +31,11 @@ class AddBookOptions(BaseModel):
     search_for_new_book: Optional[StrictBool] = Field(default=None, alias="searchForNewBook")
     __properties: ClassVar[List[str]] = ["addType", "searchForNewBook"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

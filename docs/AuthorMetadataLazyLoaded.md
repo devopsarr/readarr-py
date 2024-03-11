@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of AuthorMetadataLazyLoaded from a JSON string
 author_metadata_lazy_loaded_instance = AuthorMetadataLazyLoaded.from_json(json)
 # print the JSON string representation of the object
-print AuthorMetadataLazyLoaded.to_json()
+print(AuthorMetadataLazyLoaded.to_json())
 
 # convert the object into a dict
 author_metadata_lazy_loaded_dict = author_metadata_lazy_loaded_instance.to_dict()

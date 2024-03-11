@@ -19,7 +19,7 @@ json = "{}"
 # create an instance of BookshelfAuthorResource from a JSON string
 bookshelf_author_resource_instance = BookshelfAuthorResource.from_json(json)
 # print the JSON string representation of the object
-print BookshelfAuthorResource.to_json()
+print(BookshelfAuthorResource.to_json())
 
 # convert the object into a dict
 bookshelf_author_resource_dict = bookshelf_author_resource_instance.to_dict()

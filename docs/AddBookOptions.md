@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of AddBookOptions from a JSON string
 add_book_options_instance = AddBookOptions.from_json(json)
 # print the JSON string representation of the object
-print AddBookOptions.to_json()
+print(AddBookOptions.to_json())
 
 # convert the object into a dict
 add_book_options_dict = add_book_options_instance.to_dict()

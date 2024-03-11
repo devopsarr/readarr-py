@@ -26,7 +26,7 @@ json = "{}"
 # create an instance of AuthorEditorResource from a JSON string
 author_editor_resource_instance = AuthorEditorResource.from_json(json)
 # print the JSON string representation of the object
-print AuthorEditorResource.to_json()
+print(AuthorEditorResource.to_json())
 
 # convert the object into a dict
 author_editor_resource_dict = author_editor_resource_instance.to_dict()

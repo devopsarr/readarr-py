@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of AddAuthorOptions from a JSON string
 add_author_options_instance = AddAuthorOptions.from_json(json)
 # print the JSON string representation of the object
-print AddAuthorOptions.to_json()
+print(AddAuthorOptions.to_json())
 
 # convert the object into a dict
 add_author_options_dict = add_author_options_instance.to_dict()

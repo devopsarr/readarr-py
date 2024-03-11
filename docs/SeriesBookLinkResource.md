@@ -21,7 +21,7 @@ json = "{}"
 # create an instance of SeriesBookLinkResource from a JSON string
 series_book_link_resource_instance = SeriesBookLinkResource.from_json(json)
 # print the JSON string representation of the object
-print SeriesBookLinkResource.to_json()
+print(SeriesBookLinkResource.to_json())
 
 # convert the object into a dict
 series_book_link_resource_dict = series_book_link_resource_instance.to_dict()

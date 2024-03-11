@@ -18,7 +18,7 @@ import re  # noqa: F401
 import json
 
 from datetime import datetime
-from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from readarr.models.add_author_options import AddAuthorOptions
 from readarr.models.author_statistics_resource import AuthorStatisticsResource
@@ -67,11 +67,11 @@ class AuthorResource(BaseModel):
     statistics: Optional[AuthorStatisticsResource] = None
     __properties: ClassVar[List[str]] = ["id", "authorMetadataId", "status", "ended", "authorName", "authorNameLastFirst", "foreignAuthorId", "titleSlug", "overview", "disambiguation", "links", "nextBook", "lastBook", "images", "remotePoster", "path", "qualityProfileId", "metadataProfileId", "monitored", "monitorNewItems", "rootFolderPath", "genres", "cleanName", "sortName", "sortNameLastFirst", "tags", "added", "addOptions", "ratings", "statistics"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

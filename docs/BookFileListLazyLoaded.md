@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of BookFileListLazyLoaded from a JSON string
 book_file_list_lazy_loaded_instance = BookFileListLazyLoaded.from_json(json)
 # print the JSON string representation of the object
-print BookFileListLazyLoaded.to_json()
+print(BookFileListLazyLoaded.to_json())
 
 # convert the object into a dict
 book_file_list_lazy_loaded_dict = book_file_list_lazy_loaded_instance.to_dict()
