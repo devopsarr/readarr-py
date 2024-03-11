@@ -36,7 +36,7 @@ json = "{}"
 # create an instance of Author from a JSON string
 author_instance = Author.from_json(json)
 # print the JSON string representation of the object
-print Author.to_json()
+print(Author.to_json())
 
 # convert the object into a dict
 author_dict = author_instance.to_dict()

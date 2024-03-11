@@ -35,7 +35,7 @@ json = "{}"
 # create an instance of AuthorMetadata from a JSON string
 author_metadata_instance = AuthorMetadata.from_json(json)
 # print the JSON string representation of the object
-print AuthorMetadata.to_json()
+print(AuthorMetadata.to_json())
 
 # convert the object into a dict
 author_metadata_dict = author_metadata_instance.to_dict()

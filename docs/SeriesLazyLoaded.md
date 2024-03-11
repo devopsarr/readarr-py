@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of SeriesLazyLoaded from a JSON string
 series_lazy_loaded_instance = SeriesLazyLoaded.from_json(json)
 # print the JSON string representation of the object
-print SeriesLazyLoaded.to_json()
+print(SeriesLazyLoaded.to_json())
 
 # convert the object into a dict
 series_lazy_loaded_dict = series_lazy_loaded_instance.to_dict()

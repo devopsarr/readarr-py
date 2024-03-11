@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of ProfileFormatItem from a JSON string
 profile_format_item_instance = ProfileFormatItem.from_json(json)
 # print the JSON string representation of the object
-print ProfileFormatItem.to_json()
+print(ProfileFormatItem.to_json())
 
 # convert the object into a dict
 profile_format_item_dict = profile_format_item_instance.to_dict()

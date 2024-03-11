@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of EditionListLazyLoaded from a JSON string
 edition_list_lazy_loaded_instance = EditionListLazyLoaded.from_json(json)
 # print the JSON string representation of the object
-print EditionListLazyLoaded.to_json()
+print(EditionListLazyLoaded.to_json())
 
 # convert the object into a dict
 edition_list_lazy_loaded_dict = edition_list_lazy_loaded_instance.to_dict()

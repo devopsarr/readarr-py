@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of CustomFormat from a JSON string
 custom_format_instance = CustomFormat.from_json(json)
 # print the JSON string representation of the object
-print CustomFormat.to_json()
+print(CustomFormat.to_json())
 
 # convert the object into a dict
 custom_format_dict = custom_format_instance.to_dict()

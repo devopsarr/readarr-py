@@ -22,7 +22,7 @@ json = "{}"
 # create an instance of RenameBookResource from a JSON string
 rename_book_resource_instance = RenameBookResource.from_json(json)
 # print the JSON string representation of the object
-print RenameBookResource.to_json()
+print(RenameBookResource.to_json())
 
 # convert the object into a dict
 rename_book_resource_dict = rename_book_resource_instance.to_dict()

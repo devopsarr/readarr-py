@@ -38,7 +38,7 @@ json = "{}"
 # create an instance of Book from a JSON string
 book_instance = Book.from_json(json)
 # print the JSON string representation of the object
-print Book.to_json()
+print(Book.to_json())
 
 # convert the object into a dict
 book_dict = book_instance.to_dict()

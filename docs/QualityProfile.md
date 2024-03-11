@@ -24,7 +24,7 @@ json = "{}"
 # create an instance of QualityProfile from a JSON string
 quality_profile_instance = QualityProfile.from_json(json)
 # print the JSON string representation of the object
-print QualityProfile.to_json()
+print(QualityProfile.to_json())
 
 # convert the object into a dict
 quality_profile_dict = quality_profile_instance.to_dict()

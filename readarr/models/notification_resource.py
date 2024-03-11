@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field, StrictBool, StrictInt, StrictStr
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
 from readarr.models.contract_field import ContractField
 from readarr.models.provider_message import ProviderMessage
@@ -71,11 +71,11 @@ class NotificationResource(BaseModel):
     test_command: Optional[StrictStr] = Field(default=None, alias="testCommand")
     __properties: ClassVar[List[str]] = ["id", "name", "fields", "implementationName", "implementation", "configContract", "infoLink", "message", "tags", "presets", "link", "onGrab", "onReleaseImport", "onUpgrade", "onRename", "onAuthorAdded", "onAuthorDelete", "onBookDelete", "onBookFileDelete", "onBookFileDeleteForUpgrade", "onHealthIssue", "onDownloadFailure", "onImportFailure", "onBookRetag", "onApplicationUpdate", "supportsOnGrab", "supportsOnReleaseImport", "supportsOnUpgrade", "supportsOnRename", "supportsOnAuthorAdded", "supportsOnAuthorDelete", "supportsOnBookDelete", "supportsOnBookFileDelete", "supportsOnBookFileDeleteForUpgrade", "supportsOnHealthIssue", "includeHealthWarnings", "supportsOnDownloadFailure", "supportsOnImportFailure", "supportsOnBookRetag", "supportsOnApplicationUpdate", "testCommand"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

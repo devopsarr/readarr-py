@@ -38,7 +38,7 @@ json = "{}"
 # create an instance of EditionResource from a JSON string
 edition_resource_instance = EditionResource.from_json(json)
 # print the JSON string representation of the object
-print EditionResource.to_json()
+print(EditionResource.to_json())
 
 # convert the object into a dict
 edition_resource_dict = edition_resource_instance.to_dict()

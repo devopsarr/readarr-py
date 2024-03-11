@@ -22,7 +22,7 @@ json = "{}"
 # create an instance of ICustomFormatSpecification from a JSON string
 i_custom_format_specification_instance = ICustomFormatSpecification.from_json(json)
 # print the JSON string representation of the object
-print ICustomFormatSpecification.to_json()
+print(ICustomFormatSpecification.to_json())
 
 # convert the object into a dict
 i_custom_format_specification_dict = i_custom_format_specification_instance.to_dict()

@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict, Field
 from typing import Any, ClassVar, Dict, List, Optional
 from readarr.models.bookshelf_author_resource import BookshelfAuthorResource
 from readarr.models.monitoring_options import MonitoringOptions
@@ -34,11 +34,11 @@ class BookshelfResource(BaseModel):
     monitor_new_items: Optional[NewItemMonitorTypes] = Field(default=None, alias="monitorNewItems")
     __properties: ClassVar[List[str]] = ["authors", "monitoringOptions", "monitorNewItems"]
 
-    model_config = {
-        "populate_by_name": True,
-        "validate_assignment": True,
-        "protected_namespaces": (),
-    }
+    model_config = ConfigDict(
+        populate_by_name=True,
+        validate_assignment=True,
+        protected_namespaces=(),
+    )
 
 
     def to_str(self) -> str:

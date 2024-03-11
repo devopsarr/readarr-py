@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of MetadataProfileLazyLoaded from a JSON string
 metadata_profile_lazy_loaded_instance = MetadataProfileLazyLoaded.from_json(json)
 # print the JSON string representation of the object
-print MetadataProfileLazyLoaded.to_json()
+print(MetadataProfileLazyLoaded.to_json())
 
 # convert the object into a dict
 metadata_profile_lazy_loaded_dict = metadata_profile_lazy_loaded_instance.to_dict()

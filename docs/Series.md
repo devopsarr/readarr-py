@@ -26,7 +26,7 @@ json = "{}"
 # create an instance of Series from a JSON string
 series_instance = Series.from_json(json)
 # print the JSON string representation of the object
-print Series.to_json()
+print(Series.to_json())
 
 # convert the object into a dict
 series_dict = series_instance.to_dict()

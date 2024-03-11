@@ -28,7 +28,7 @@ json = "{}"
 # create an instance of ParsedBookInfo from a JSON string
 parsed_book_info_instance = ParsedBookInfo.from_json(json)
 # print the JSON string representation of the object
-print ParsedBookInfo.to_json()
+print(ParsedBookInfo.to_json())
 
 # convert the object into a dict
 parsed_book_info_dict = parsed_book_info_instance.to_dict()

@@ -18,7 +18,7 @@ json = "{}"
 # create an instance of QualityProfileLazyLoaded from a JSON string
 quality_profile_lazy_loaded_instance = QualityProfileLazyLoaded.from_json(json)
 # print the JSON string representation of the object
-print QualityProfileLazyLoaded.to_json()
+print(QualityProfileLazyLoaded.to_json())
 
 # convert the object into a dict
 quality_profile_lazy_loaded_dict = quality_profile_lazy_loaded_instance.to_dict()

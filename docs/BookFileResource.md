@@ -27,7 +27,7 @@ json = "{}"
 # create an instance of BookFileResource from a JSON string
 book_file_resource_instance = BookFileResource.from_json(json)
 # print the JSON string representation of the object
-print BookFileResource.to_json()
+print(BookFileResource.to_json())
 
 # convert the object into a dict
 book_file_resource_dict = book_file_resource_instance.to_dict()

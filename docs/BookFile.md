@@ -32,7 +32,7 @@ json = "{}"
 # create an instance of BookFile from a JSON string
 book_file_instance = BookFile.from_json(json)
 # print the JSON string representation of the object
-print BookFile.to_json()
+print(BookFile.to_json())
 
 # convert the object into a dict
 book_file_dict = book_file_instance.to_dict()

@@ -20,7 +20,7 @@ json = "{}"
 # create an instance of BookEditorResource from a JSON string
 book_editor_resource_instance = BookEditorResource.from_json(json)
 # print the JSON string representation of the object
-print BookEditorResource.to_json()
+print(BookEditorResource.to_json())
 
 # convert the object into a dict
 book_editor_resource_dict = book_editor_resource_instance.to_dict()
