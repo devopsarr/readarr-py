@@ -32,7 +32,7 @@ print(BookFileResource.to_json())
 # convert the object into a dict
 book_file_resource_dict = book_file_resource_instance.to_dict()
 # create an instance of BookFileResource from a dict
-book_file_resource_form_dict = book_file_resource.from_dict(book_file_resource_dict)
+book_file_resource_from_dict = BookFileResource.from_dict(book_file_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

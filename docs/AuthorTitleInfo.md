@@ -24,7 +24,7 @@ print(AuthorTitleInfo.to_json())
 # convert the object into a dict
 author_title_info_dict = author_title_info_instance.to_dict()
 # create an instance of AuthorTitleInfo from a dict
-author_title_info_form_dict = author_title_info.from_dict(author_title_info_dict)
+author_title_info_from_dict = AuthorTitleInfo.from_dict(author_title_info_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

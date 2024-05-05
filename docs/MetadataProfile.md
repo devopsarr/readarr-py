@@ -31,7 +31,7 @@ print(MetadataProfile.to_json())
 # convert the object into a dict
 metadata_profile_dict = metadata_profile_instance.to_dict()
 # create an instance of MetadataProfile from a dict
-metadata_profile_form_dict = metadata_profile.from_dict(metadata_profile_dict)
+metadata_profile_from_dict = MetadataProfile.from_dict(metadata_profile_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

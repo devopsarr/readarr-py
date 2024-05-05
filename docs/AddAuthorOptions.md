@@ -25,7 +25,7 @@ print(AddAuthorOptions.to_json())
 # convert the object into a dict
 add_author_options_dict = add_author_options_instance.to_dict()
 # create an instance of AddAuthorOptions from a dict
-add_author_options_form_dict = add_author_options.from_dict(add_author_options_dict)
+add_author_options_from_dict = AddAuthorOptions.from_dict(add_author_options_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

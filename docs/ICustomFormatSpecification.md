@@ -27,7 +27,7 @@ print(ICustomFormatSpecification.to_json())
 # convert the object into a dict
 i_custom_format_specification_dict = i_custom_format_specification_instance.to_dict()
 # create an instance of ICustomFormatSpecification from a dict
-i_custom_format_specification_form_dict = i_custom_format_specification.from_dict(i_custom_format_specification_dict)
+i_custom_format_specification_from_dict = ICustomFormatSpecification.from_dict(i_custom_format_specification_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

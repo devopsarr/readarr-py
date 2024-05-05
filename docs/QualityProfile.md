@@ -29,7 +29,7 @@ print(QualityProfile.to_json())
 # convert the object into a dict
 quality_profile_dict = quality_profile_instance.to_dict()
 # create an instance of QualityProfile from a dict
-quality_profile_form_dict = quality_profile.from_dict(quality_profile_dict)
+quality_profile_from_dict = QualityProfile.from_dict(quality_profile_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

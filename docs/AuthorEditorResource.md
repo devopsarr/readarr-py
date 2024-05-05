@@ -31,7 +31,7 @@ print(AuthorEditorResource.to_json())
 # convert the object into a dict
 author_editor_resource_dict = author_editor_resource_instance.to_dict()
 # create an instance of AuthorEditorResource from a dict
-author_editor_resource_form_dict = author_editor_resource.from_dict(author_editor_resource_dict)
+author_editor_resource_from_dict = AuthorEditorResource.from_dict(author_editor_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

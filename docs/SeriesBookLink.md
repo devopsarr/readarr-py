@@ -29,7 +29,7 @@ print(SeriesBookLink.to_json())
 # convert the object into a dict
 series_book_link_dict = series_book_link_instance.to_dict()
 # create an instance of SeriesBookLink from a dict
-series_book_link_form_dict = series_book_link.from_dict(series_book_link_dict)
+series_book_link_from_dict = SeriesBookLink.from_dict(series_book_link_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
