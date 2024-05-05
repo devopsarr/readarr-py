@@ -40,7 +40,7 @@ print(AuthorMetadata.to_json())
 # convert the object into a dict
 author_metadata_dict = author_metadata_instance.to_dict()
 # create an instance of AuthorMetadata from a dict
-author_metadata_form_dict = author_metadata.from_dict(author_metadata_dict)
+author_metadata_from_dict = AuthorMetadata.from_dict(author_metadata_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

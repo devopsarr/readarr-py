@@ -31,7 +31,7 @@ print(Series.to_json())
 # convert the object into a dict
 series_dict = series_instance.to_dict()
 # create an instance of Series from a dict
-series_form_dict = series.from_dict(series_dict)
+series_from_dict = Series.from_dict(series_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

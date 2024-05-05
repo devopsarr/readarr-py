@@ -43,7 +43,7 @@ print(Edition.to_json())
 # convert the object into a dict
 edition_dict = edition_instance.to_dict()
 # create an instance of Edition from a dict
-edition_form_dict = edition.from_dict(edition_dict)
+edition_from_dict = Edition.from_dict(edition_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

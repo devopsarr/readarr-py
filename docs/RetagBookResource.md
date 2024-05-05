@@ -28,7 +28,7 @@ print(RetagBookResource.to_json())
 # convert the object into a dict
 retag_book_resource_dict = retag_book_resource_instance.to_dict()
 # create an instance of RetagBookResource from a dict
-retag_book_resource_form_dict = retag_book_resource.from_dict(retag_book_resource_dict)
+retag_book_resource_from_dict = RetagBookResource.from_dict(retag_book_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

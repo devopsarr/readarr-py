@@ -23,7 +23,7 @@ print(AddBookOptions.to_json())
 # convert the object into a dict
 add_book_options_dict = add_book_options_instance.to_dict()
 # create an instance of AddBookOptions from a dict
-add_book_options_form_dict = add_book_options.from_dict(add_book_options_dict)
+add_book_options_from_dict = AddBookOptions.from_dict(add_book_options_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

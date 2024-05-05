@@ -27,7 +27,7 @@ print(AuthorStatisticsResource.to_json())
 # convert the object into a dict
 author_statistics_resource_dict = author_statistics_resource_instance.to_dict()
 # create an instance of AuthorStatisticsResource from a dict
-author_statistics_resource_form_dict = author_statistics_resource.from_dict(author_statistics_resource_dict)
+author_statistics_resource_from_dict = AuthorStatisticsResource.from_dict(author_statistics_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -23,7 +23,7 @@ print(QualityProfileLazyLoaded.to_json())
 # convert the object into a dict
 quality_profile_lazy_loaded_dict = quality_profile_lazy_loaded_instance.to_dict()
 # create an instance of QualityProfileLazyLoaded from a dict
-quality_profile_lazy_loaded_form_dict = quality_profile_lazy_loaded.from_dict(quality_profile_lazy_loaded_dict)
+quality_profile_lazy_loaded_from_dict = QualityProfileLazyLoaded.from_dict(quality_profile_lazy_loaded_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

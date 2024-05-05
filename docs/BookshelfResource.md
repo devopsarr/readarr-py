@@ -24,7 +24,7 @@ print(BookshelfResource.to_json())
 # convert the object into a dict
 bookshelf_resource_dict = bookshelf_resource_instance.to_dict()
 # create an instance of BookshelfResource from a dict
-bookshelf_resource_form_dict = bookshelf_resource.from_dict(bookshelf_resource_dict)
+bookshelf_resource_from_dict = BookshelfResource.from_dict(bookshelf_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

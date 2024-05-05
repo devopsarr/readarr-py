@@ -26,7 +26,7 @@ print(BookStatisticsResource.to_json())
 # convert the object into a dict
 book_statistics_resource_dict = book_statistics_resource_instance.to_dict()
 # create an instance of BookStatisticsResource from a dict
-book_statistics_resource_form_dict = book_statistics_resource.from_dict(book_statistics_resource_dict)
+book_statistics_resource_from_dict = BookStatisticsResource.from_dict(book_statistics_resource_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
