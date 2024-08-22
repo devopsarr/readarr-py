@@ -76,9 +76,9 @@ class BookshelfResource(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of each item in authors (list)
         _items = []
         if self.authors:
-            for _item in self.authors:
-                if _item:
-                    _items.append(_item.to_dict())
+            for _item_authors in self.authors:
+                if _item_authors:
+                    _items.append(_item_authors.to_dict())
             _dict['authors'] = _items
         # override the default output from pydantic by calling `to_dict()` of monitoring_options
         if self.monitoring_options:
