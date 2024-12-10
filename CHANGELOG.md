@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.2](https://github.com/devopsarr/readarr-py/compare/v1.0.1...v1.0.2) (2024-12-10)
+
+
+### Bug Fixes
+
+* **deps:** update openapitools/openapi-generator-cli docker tag to v7.10.0 ([424fd63](https://github.com/devopsarr/readarr-py/commit/424fd63b7359269a1bbd8ad205ff7bfc6e09985a))
+* **deps:** update openapitools/openapi-generator-cli docker tag to v7.9.0 ([3f46f50](https://github.com/devopsarr/readarr-py/commit/3f46f50634f7456dba2ec596d599f4153200bed5))
+
 ## [1.0.1](https://github.com/devopsarr/readarr-py/compare/v1.0.0...v1.0.1) (2024-02-21)
 
 
