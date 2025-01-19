@@ -307,7 +307,6 @@ Class | Method | HTTP request | Description
 *RootFolderApi* | [**update_root_folder**](docs/RootFolderApi.md#update_root_folder) | **PUT** /api/v1/rootfolder/{id} | 
 *SearchApi* | [**get_search**](docs/SearchApi.md#get_search) | **GET** /api/v1/search | 
 *SeriesApi* | [**list_series**](docs/SeriesApi.md#list_series) | **GET** /api/v1/series | 
-*StaticResourceApi* | [**get**](docs/StaticResourceApi.md#get) | **GET** / | 
 *StaticResourceApi* | [**get_by_path**](docs/StaticResourceApi.md#get_by_path) | **GET** /{path} | 
 *StaticResourceApi* | [**get_content_by_path**](docs/StaticResourceApi.md#get_content_by_path) | **GET** /content/{path} | 
 *StaticResourceApi* | [**get_login**](docs/StaticResourceApi.md#get_login) | **GET** /login | 
