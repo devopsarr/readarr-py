@@ -535,7 +535,7 @@ conf = readarr.Configuration(
                "Python Version: {pyversion}\n"\
                "Version of the API: v0.3.18.2411\n"\
                "SDK Package Version:  {v}".\
-               format(env=sys.platform, pyversion=sys.version, v="1.1.0") # x-release-please-version
+               format(env=sys.platform, pyversion=sys.version, v="0.0.1") # x-release-please-version
 
     def get_host_settings(self) -> List[HostSetting]:
         """Gets an array of host settings
