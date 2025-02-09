@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **date_added** | **datetime** |  | [optional] 
 **quality** | [**QualityModel**](QualityModel.md) |  | [optional] 
 **quality_weight** | **int** |  | [optional] 
+**indexer_flags** | **int** |  | [optional] 
 **media_info** | [**MediaInfoResource**](MediaInfoResource.md) |  | [optional] 
 **quality_cutoff_not_met** | **bool** |  | [optional] 
 **audio_tags** | [**ParsedTrackInfo**](ParsedTrackInfo.md) |  | [optional] 

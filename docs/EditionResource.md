@@ -26,7 +26,6 @@ Name | Type | Description | Notes
 **monitored** | **bool** |  | [optional] 
 **manual_add** | **bool** |  | [optional] 
 **remote_cover** | **str** |  | [optional] 
-**grabbed** | **bool** |  | [optional] 
 
 ## Example
 
