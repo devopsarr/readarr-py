@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://github.com/devopsarr/readarr-py/compare/v1.1.0...v1.2.0) (2025-02-09)
+
+
+### Features
+
+* update readarr build job to v0.4.10.2734 ([7287bd5](https://github.com/devopsarr/readarr-py/commit/7287bd54c219fe6f3ac1aa158ad732a19358271a))
+
 ## [1.1.0](https://github.com/devopsarr/readarr-py/compare/v1.0.1...v1.1.0) (2025-01-20)
 
 
