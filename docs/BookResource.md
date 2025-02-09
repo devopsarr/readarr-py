@@ -29,7 +29,6 @@ Name | Type | Description | Notes
 **add_options** | [**AddBookOptions**](AddBookOptions.md) |  | [optional] 
 **remote_cover** | **str** |  | [optional] 
 **editions** | [**List[EditionResource]**](EditionResource.md) |  | [optional] 
-**grabbed** | **bool** |  | [optional] 
 
 ## Example
 

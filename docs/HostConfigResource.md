@@ -12,9 +12,11 @@ Name | Type | Description | Notes
 **enable_ssl** | **bool** |  | [optional] 
 **launch_browser** | **bool** |  | [optional] 
 **authentication_method** | [**AuthenticationType**](AuthenticationType.md) |  | [optional] 
+**authentication_required** | [**AuthenticationRequiredType**](AuthenticationRequiredType.md) |  | [optional] 
 **analytics_enabled** | **bool** |  | [optional] 
 **username** | **str** |  | [optional] 
 **password** | **str** |  | [optional] 
+**password_confirmation** | **str** |  | [optional] 
 **log_level** | **str** |  | [optional] 
 **console_log_level** | **str** |  | [optional] 
 **branch** | **str** |  | [optional] 
@@ -39,6 +41,7 @@ Name | Type | Description | Notes
 **backup_folder** | **str** |  | [optional] 
 **backup_interval** | **int** |  | [optional] 
 **backup_retention** | **int** |  | [optional] 
+**trust_cgnat_ip_addresses** | **bool** |  | [optional] 
 
 ## Example
 

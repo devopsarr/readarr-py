@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **genres** | **List[str]** |  | [optional] 
 **related_books** | **List[int]** |  | [optional] 
 **ratings** | [**Ratings**](Ratings.md) |  | [optional] 
+**last_search_time** | **datetime** |  | [optional] 
 **clean_title** | **str** |  | [optional] 
 **monitored** | **bool** |  | [optional] 
 **any_edition_ok** | **bool** |  | [optional] 

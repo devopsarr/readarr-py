@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **scene_name** | **str** |  | [optional] 
 **release_group** | **str** |  | [optional] 
 **quality** | [**QualityModel**](QualityModel.md) |  | [optional] 
+**indexer_flags** | [**IndexerFlags**](IndexerFlags.md) |  | [optional] 
 **media_info** | [**MediaInfoModel**](MediaInfoModel.md) |  | [optional] 
 **edition_id** | **int** |  | [optional] 
 **calibre_id** | **int** |  | [optional] 
