@@ -15,8 +15,6 @@ Method | HTTP request | Description
 # **delete_book_file**
 > delete_book_file(id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -94,8 +92,6 @@ void (empty response body)
 
 # **delete_book_file_bulk**
 > delete_book_file_bulk(book_file_list_resource=book_file_list_resource)
-
-
 
 ### Example
 
@@ -175,8 +171,6 @@ void (empty response body)
 
 # **get_book_file_by_id**
 > BookFileResource get_book_file_by_id(id)
-
-
 
 ### Example
 
@@ -258,8 +252,6 @@ Name | Type | Description  | Notes
 
 # **list_book_file**
 > List[BookFileResource] list_book_file(author_id=author_id, book_file_ids=book_file_ids, book_id=book_id, unmapped=unmapped)
-
-
 
 ### Example
 
@@ -348,8 +340,6 @@ Name | Type | Description  | Notes
 # **put_book_file_editor**
 > put_book_file_editor(book_file_list_resource=book_file_list_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -428,8 +418,6 @@ void (empty response body)
 
 # **update_book_file**
 > BookFileResource update_book_file(id, book_file_resource=book_file_resource)
-
-
 
 ### Example
 

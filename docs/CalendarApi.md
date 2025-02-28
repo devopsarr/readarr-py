@@ -11,8 +11,6 @@ Method | HTTP request | Description
 # **get_calendar_by_id**
 > BookResource get_calendar_by_id(id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -93,8 +91,6 @@ Name | Type | Description  | Notes
 
 # **list_calendar**
 > List[BookResource] list_calendar(start=start, end=end, unmonitored=unmonitored, include_author=include_author)
-
-
 
 ### Example
 
