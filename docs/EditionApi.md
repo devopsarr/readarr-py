@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **list_edition**
 > List[EditionResource] list_edition(book_id=book_id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):

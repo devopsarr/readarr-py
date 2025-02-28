@@ -11,8 +11,6 @@ Method | HTTP request | Description
 # **get_media_cover_author_by_filename**
 > get_media_cover_author_by_filename(author_id, filename)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -92,8 +90,6 @@ void (empty response body)
 
 # **get_media_cover_book_by_filename**
 > get_media_cover_book_by_filename(book_id, filename)
-
-
 
 ### Example
 

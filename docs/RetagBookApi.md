@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **list_retag**
 > List[RetagBookResource] list_retag(author_id=author_id, book_id=book_id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):

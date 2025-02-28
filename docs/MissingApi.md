@@ -11,8 +11,6 @@ Method | HTTP request | Description
 # **get_wanted_missing**
 > BookResourcePagingResource get_wanted_missing(page=page, page_size=page_size, sort_key=sort_key, sort_direction=sort_direction, include_author=include_author, monitored=monitored)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -104,8 +102,6 @@ Name | Type | Description  | Notes
 
 # **get_wanted_missing_by_id**
 > BookResource get_wanted_missing_by_id(id)
-
-
 
 ### Example
 

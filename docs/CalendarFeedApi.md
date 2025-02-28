@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **get_feed_v1_calendar_readarr_ics**
 > get_feed_v1_calendar_readarr_ics(past_days=past_days, future_days=future_days, tag_list=tag_list, unmonitored=unmonitored)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
