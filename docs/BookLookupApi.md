@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **get_book_lookup**
 > get_book_lookup(term=term)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):

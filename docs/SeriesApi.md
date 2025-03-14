@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **list_series**
 > List[SeriesResource] list_series(author_id=author_id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
