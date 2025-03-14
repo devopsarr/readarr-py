@@ -16,8 +16,6 @@ Method | HTTP request | Description
 # **create_book**
 > BookResource create_book(book_resource=book_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -98,8 +96,6 @@ Name | Type | Description  | Notes
 
 # **delete_book**
 > delete_book(id, delete_files=delete_files, add_import_list_exclusion=add_import_list_exclusion)
-
-
 
 ### Example
 
@@ -183,8 +179,6 @@ void (empty response body)
 # **get_book_by_id**
 > BookResource get_book_by_id(id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -266,8 +260,6 @@ Name | Type | Description  | Notes
 # **get_book_overview**
 > get_book_overview(id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -345,8 +337,6 @@ void (empty response body)
 
 # **list_book**
 > List[BookResource] list_book(author_id=author_id, book_ids=book_ids, title_slug=title_slug, include_all_author_books=include_all_author_books)
-
-
 
 ### Example
 
@@ -435,8 +425,6 @@ Name | Type | Description  | Notes
 # **put_book_monitor**
 > put_book_monitor(books_monitored_resource=books_monitored_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -515,8 +503,6 @@ void (empty response body)
 
 # **update_book**
 > BookResource update_book(id, book_resource=book_resource)
-
-
 
 ### Example
 

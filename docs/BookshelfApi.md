@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **create_bookshelf**
 > create_bookshelf(bookshelf_resource=bookshelf_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):

@@ -14,8 +14,6 @@ Method | HTTP request | Description
 # **create_author**
 > AuthorResource create_author(author_resource=author_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -96,8 +94,6 @@ Name | Type | Description  | Notes
 
 # **delete_author**
 > delete_author(id, delete_files=delete_files, add_import_list_exclusion=add_import_list_exclusion)
-
-
 
 ### Example
 
@@ -181,8 +177,6 @@ void (empty response body)
 # **get_author_by_id**
 > AuthorResource get_author_by_id(id)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -264,8 +258,6 @@ Name | Type | Description  | Notes
 # **list_author**
 > List[AuthorResource] list_author()
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -342,8 +334,6 @@ This endpoint does not need any parameter.
 
 # **update_author**
 > AuthorResource update_author(id, move_files=move_files, author_resource=author_resource)
-
-
 
 ### Example
 

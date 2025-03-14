@@ -11,8 +11,6 @@ Method | HTTP request | Description
 # **delete_book_editor**
 > delete_book_editor(book_editor_resource=book_editor_resource)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
@@ -91,8 +89,6 @@ void (empty response body)
 
 # **put_book_editor**
 > put_book_editor(book_editor_resource=book_editor_resource)
-
-
 
 ### Example
 

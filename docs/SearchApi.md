@@ -10,8 +10,6 @@ Method | HTTP request | Description
 # **get_search**
 > get_search(term=term)
 
-
-
 ### Example
 
 * Api Key Authentication (apikey):
