@@ -13,7 +13,174 @@
 """  # noqa: E501
 
 
-# import models into model package
+if __import__("typing").TYPE_CHECKING:
+    # import models into model package
+    from readarr.models.add_author_options import AddAuthorOptions
+    from readarr.models.add_book_options import AddBookOptions
+    from readarr.models.allow_fingerprinting import AllowFingerprinting
+    from readarr.models.api_info_resource import ApiInfoResource
+    from readarr.models.apply_tags import ApplyTags
+    from readarr.models.authentication_required_type import AuthenticationRequiredType
+    from readarr.models.authentication_type import AuthenticationType
+    from readarr.models.author import Author
+    from readarr.models.author_editor_resource import AuthorEditorResource
+    from readarr.models.author_lazy_loaded import AuthorLazyLoaded
+    from readarr.models.author_metadata import AuthorMetadata
+    from readarr.models.author_metadata_lazy_loaded import AuthorMetadataLazyLoaded
+    from readarr.models.author_resource import AuthorResource
+    from readarr.models.author_statistics_resource import AuthorStatisticsResource
+    from readarr.models.author_status_type import AuthorStatusType
+    from readarr.models.author_title_info import AuthorTitleInfo
+    from readarr.models.backup_resource import BackupResource
+    from readarr.models.backup_type import BackupType
+    from readarr.models.blocklist_bulk_resource import BlocklistBulkResource
+    from readarr.models.blocklist_resource import BlocklistResource
+    from readarr.models.blocklist_resource_paging_resource import BlocklistResourcePagingResource
+    from readarr.models.book import Book
+    from readarr.models.book_add_type import BookAddType
+    from readarr.models.book_editor_resource import BookEditorResource
+    from readarr.models.book_file import BookFile
+    from readarr.models.book_file_list_lazy_loaded import BookFileListLazyLoaded
+    from readarr.models.book_file_list_resource import BookFileListResource
+    from readarr.models.book_file_resource import BookFileResource
+    from readarr.models.book_lazy_loaded import BookLazyLoaded
+    from readarr.models.book_list_lazy_loaded import BookListLazyLoaded
+    from readarr.models.book_resource import BookResource
+    from readarr.models.book_resource_paging_resource import BookResourcePagingResource
+    from readarr.models.book_statistics_resource import BookStatisticsResource
+    from readarr.models.books_monitored_resource import BooksMonitoredResource
+    from readarr.models.bookshelf_author_resource import BookshelfAuthorResource
+    from readarr.models.bookshelf_resource import BookshelfResource
+    from readarr.models.certificate_validation_type import CertificateValidationType
+    from readarr.models.command import Command
+    from readarr.models.command_priority import CommandPriority
+    from readarr.models.command_resource import CommandResource
+    from readarr.models.command_result import CommandResult
+    from readarr.models.command_status import CommandStatus
+    from readarr.models.command_trigger import CommandTrigger
+    from readarr.models.contract_field import ContractField
+    from readarr.models.custom_filter_resource import CustomFilterResource
+    from readarr.models.custom_format import CustomFormat
+    from readarr.models.custom_format_resource import CustomFormatResource
+    from readarr.models.custom_format_specification_schema import CustomFormatSpecificationSchema
+    from readarr.models.database_type import DatabaseType
+    from readarr.models.delay_profile_resource import DelayProfileResource
+    from readarr.models.development_config_resource import DevelopmentConfigResource
+    from readarr.models.disk_space_resource import DiskSpaceResource
+    from readarr.models.download_client_bulk_resource import DownloadClientBulkResource
+    from readarr.models.download_client_config_resource import DownloadClientConfigResource
+    from readarr.models.download_client_resource import DownloadClientResource
+    from readarr.models.download_protocol import DownloadProtocol
+    from readarr.models.edition import Edition
+    from readarr.models.edition_lazy_loaded import EditionLazyLoaded
+    from readarr.models.edition_list_lazy_loaded import EditionListLazyLoaded
+    from readarr.models.edition_resource import EditionResource
+    from readarr.models.entity_history_event_type import EntityHistoryEventType
+    from readarr.models.file_date_type import FileDateType
+    from readarr.models.health_check_result import HealthCheckResult
+    from readarr.models.health_resource import HealthResource
+    from readarr.models.history_resource import HistoryResource
+    from readarr.models.history_resource_paging_resource import HistoryResourcePagingResource
+    from readarr.models.host_config_resource import HostConfigResource
+    from readarr.models.i_custom_format_specification import ICustomFormatSpecification
+    from readarr.models.import_list_bulk_resource import ImportListBulkResource
+    from readarr.models.import_list_exclusion_resource import ImportListExclusionResource
+    from readarr.models.import_list_monitor_type import ImportListMonitorType
+    from readarr.models.import_list_resource import ImportListResource
+    from readarr.models.import_list_type import ImportListType
+    from readarr.models.indexer_bulk_resource import IndexerBulkResource
+    from readarr.models.indexer_config_resource import IndexerConfigResource
+    from readarr.models.indexer_flag_resource import IndexerFlagResource
+    from readarr.models.indexer_flags import IndexerFlags
+    from readarr.models.indexer_resource import IndexerResource
+    from readarr.models.iso_country import IsoCountry
+    from readarr.models.language_resource import LanguageResource
+    from readarr.models.links import Links
+    from readarr.models.log_file_resource import LogFileResource
+    from readarr.models.log_resource import LogResource
+    from readarr.models.log_resource_paging_resource import LogResourcePagingResource
+    from readarr.models.manual_import_resource import ManualImportResource
+    from readarr.models.manual_import_update_resource import ManualImportUpdateResource
+    from readarr.models.media_cover import MediaCover
+    from readarr.models.media_cover_types import MediaCoverTypes
+    from readarr.models.media_info_model import MediaInfoModel
+    from readarr.models.media_info_resource import MediaInfoResource
+    from readarr.models.media_management_config_resource import MediaManagementConfigResource
+    from readarr.models.metadata_profile import MetadataProfile
+    from readarr.models.metadata_profile_lazy_loaded import MetadataProfileLazyLoaded
+    from readarr.models.metadata_profile_resource import MetadataProfileResource
+    from readarr.models.metadata_provider_config_resource import MetadataProviderConfigResource
+    from readarr.models.metadata_resource import MetadataResource
+    from readarr.models.monitor_types import MonitorTypes
+    from readarr.models.monitoring_options import MonitoringOptions
+    from readarr.models.naming_config_resource import NamingConfigResource
+    from readarr.models.new_item_monitor_types import NewItemMonitorTypes
+    from readarr.models.notification_resource import NotificationResource
+    from readarr.models.parse_resource import ParseResource
+    from readarr.models.parsed_book_info import ParsedBookInfo
+    from readarr.models.parsed_track_info import ParsedTrackInfo
+    from readarr.models.ping_resource import PingResource
+    from readarr.models.profile_format_item import ProfileFormatItem
+    from readarr.models.profile_format_item_resource import ProfileFormatItemResource
+    from readarr.models.proper_download_types import ProperDownloadTypes
+    from readarr.models.provider_message import ProviderMessage
+    from readarr.models.provider_message_type import ProviderMessageType
+    from readarr.models.proxy_type import ProxyType
+    from readarr.models.quality import Quality
+    from readarr.models.quality_definition_resource import QualityDefinitionResource
+    from readarr.models.quality_model import QualityModel
+    from readarr.models.quality_profile import QualityProfile
+    from readarr.models.quality_profile_lazy_loaded import QualityProfileLazyLoaded
+    from readarr.models.quality_profile_quality_item import QualityProfileQualityItem
+    from readarr.models.quality_profile_quality_item_resource import QualityProfileQualityItemResource
+    from readarr.models.quality_profile_resource import QualityProfileResource
+    from readarr.models.queue_bulk_resource import QueueBulkResource
+    from readarr.models.queue_resource import QueueResource
+    from readarr.models.queue_resource_paging_resource import QueueResourcePagingResource
+    from readarr.models.queue_status_resource import QueueStatusResource
+    from readarr.models.ratings import Ratings
+    from readarr.models.rejection import Rejection
+    from readarr.models.rejection_type import RejectionType
+    from readarr.models.release_profile_resource import ReleaseProfileResource
+    from readarr.models.release_resource import ReleaseResource
+    from readarr.models.remote_path_mapping_resource import RemotePathMappingResource
+    from readarr.models.rename_book_resource import RenameBookResource
+    from readarr.models.rescan_after_refresh_type import RescanAfterRefreshType
+    from readarr.models.retag_book_resource import RetagBookResource
+    from readarr.models.revision import Revision
+    from readarr.models.root_folder_resource import RootFolderResource
+    from readarr.models.runtime_mode import RuntimeMode
+    from readarr.models.select_option import SelectOption
+    from readarr.models.series import Series
+    from readarr.models.series_book_link import SeriesBookLink
+    from readarr.models.series_book_link_list_lazy_loaded import SeriesBookLinkListLazyLoaded
+    from readarr.models.series_book_link_resource import SeriesBookLinkResource
+    from readarr.models.series_lazy_loaded import SeriesLazyLoaded
+    from readarr.models.series_list_lazy_loaded import SeriesListLazyLoaded
+    from readarr.models.series_resource import SeriesResource
+    from readarr.models.sort_direction import SortDirection
+    from readarr.models.system_resource import SystemResource
+    from readarr.models.tag_details_resource import TagDetailsResource
+    from readarr.models.tag_difference import TagDifference
+    from readarr.models.tag_resource import TagResource
+    from readarr.models.task_resource import TaskResource
+    from readarr.models.tracked_download_state import TrackedDownloadState
+    from readarr.models.tracked_download_status import TrackedDownloadStatus
+    from readarr.models.tracked_download_status_message import TrackedDownloadStatusMessage
+    from readarr.models.ui_config_resource import UiConfigResource
+    from readarr.models.update_changes import UpdateChanges
+    from readarr.models.update_mechanism import UpdateMechanism
+    from readarr.models.update_resource import UpdateResource
+    from readarr.models.write_audio_tags_type import WriteAudioTagsType
+    from readarr.models.write_book_tags_type import WriteBookTagsType
+    
+else:
+    from lazy_imports import LazyModule, as_package, load
+
+    load(
+        LazyModule(
+            *as_package(__file__),
+            """# import models into model package
 from readarr.models.add_author_options import AddAuthorOptions
 from readarr.models.add_book_options import AddBookOptions
 from readarr.models.allow_fingerprinting import AllowFingerprinting
@@ -172,3 +339,9 @@ from readarr.models.update_mechanism import UpdateMechanism
 from readarr.models.update_resource import UpdateResource
 from readarr.models.write_audio_tags_type import WriteAudioTagsType
 from readarr.models.write_book_tags_type import WriteBookTagsType
+
+""",
+            name=__name__,
+            doc=__doc__,
+        )
+    )
