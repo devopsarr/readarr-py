@@ -1,6 +1,88 @@
 # flake8: noqa
 
-# import apis into api package
+if __import__("typing").TYPE_CHECKING:
+    # import apis into api package
+    from readarr.api.api_info_api import ApiInfoApi
+    from readarr.api.authentication_api import AuthenticationApi
+    from readarr.api.author_api import AuthorApi
+    from readarr.api.author_editor_api import AuthorEditorApi
+    from readarr.api.author_lookup_api import AuthorLookupApi
+    from readarr.api.backup_api import BackupApi
+    from readarr.api.blocklist_api import BlocklistApi
+    from readarr.api.book_api import BookApi
+    from readarr.api.book_editor_api import BookEditorApi
+    from readarr.api.book_file_api import BookFileApi
+    from readarr.api.book_lookup_api import BookLookupApi
+    from readarr.api.bookshelf_api import BookshelfApi
+    from readarr.api.calendar_api import CalendarApi
+    from readarr.api.calendar_feed_api import CalendarFeedApi
+    from readarr.api.command_api import CommandApi
+    from readarr.api.custom_filter_api import CustomFilterApi
+    from readarr.api.custom_format_api import CustomFormatApi
+    from readarr.api.cutoff_api import CutoffApi
+    from readarr.api.delay_profile_api import DelayProfileApi
+    from readarr.api.development_config_api import DevelopmentConfigApi
+    from readarr.api.disk_space_api import DiskSpaceApi
+    from readarr.api.download_client_api import DownloadClientApi
+    from readarr.api.download_client_config_api import DownloadClientConfigApi
+    from readarr.api.edition_api import EditionApi
+    from readarr.api.file_system_api import FileSystemApi
+    from readarr.api.health_api import HealthApi
+    from readarr.api.history_api import HistoryApi
+    from readarr.api.host_config_api import HostConfigApi
+    from readarr.api.import_list_api import ImportListApi
+    from readarr.api.import_list_exclusion_api import ImportListExclusionApi
+    from readarr.api.indexer_api import IndexerApi
+    from readarr.api.indexer_config_api import IndexerConfigApi
+    from readarr.api.indexer_flag_api import IndexerFlagApi
+    from readarr.api.language_api import LanguageApi
+    from readarr.api.localization_api import LocalizationApi
+    from readarr.api.log_api import LogApi
+    from readarr.api.log_file_api import LogFileApi
+    from readarr.api.manual_import_api import ManualImportApi
+    from readarr.api.media_cover_api import MediaCoverApi
+    from readarr.api.media_management_config_api import MediaManagementConfigApi
+    from readarr.api.metadata_api import MetadataApi
+    from readarr.api.metadata_profile_api import MetadataProfileApi
+    from readarr.api.metadata_profile_schema_api import MetadataProfileSchemaApi
+    from readarr.api.metadata_provider_config_api import MetadataProviderConfigApi
+    from readarr.api.missing_api import MissingApi
+    from readarr.api.naming_config_api import NamingConfigApi
+    from readarr.api.notification_api import NotificationApi
+    from readarr.api.parse_api import ParseApi
+    from readarr.api.ping_api import PingApi
+    from readarr.api.quality_definition_api import QualityDefinitionApi
+    from readarr.api.quality_profile_api import QualityProfileApi
+    from readarr.api.quality_profile_schema_api import QualityProfileSchemaApi
+    from readarr.api.queue_api import QueueApi
+    from readarr.api.queue_action_api import QueueActionApi
+    from readarr.api.queue_details_api import QueueDetailsApi
+    from readarr.api.queue_status_api import QueueStatusApi
+    from readarr.api.release_api import ReleaseApi
+    from readarr.api.release_profile_api import ReleaseProfileApi
+    from readarr.api.release_push_api import ReleasePushApi
+    from readarr.api.remote_path_mapping_api import RemotePathMappingApi
+    from readarr.api.rename_book_api import RenameBookApi
+    from readarr.api.retag_book_api import RetagBookApi
+    from readarr.api.root_folder_api import RootFolderApi
+    from readarr.api.search_api import SearchApi
+    from readarr.api.series_api import SeriesApi
+    from readarr.api.static_resource_api import StaticResourceApi
+    from readarr.api.system_api import SystemApi
+    from readarr.api.tag_api import TagApi
+    from readarr.api.tag_details_api import TagDetailsApi
+    from readarr.api.task_api import TaskApi
+    from readarr.api.ui_config_api import UiConfigApi
+    from readarr.api.update_api import UpdateApi
+    from readarr.api.update_log_file_api import UpdateLogFileApi
+    
+else:
+    from lazy_imports import LazyModule, as_package, load
+
+    load(
+        LazyModule(
+            *as_package(__file__),
+            """# import apis into api package
 from readarr.api.api_info_api import ApiInfoApi
 from readarr.api.authentication_api import AuthenticationApi
 from readarr.api.author_api import AuthorApi
@@ -75,3 +157,8 @@ from readarr.api.ui_config_api import UiConfigApi
 from readarr.api.update_api import UpdateApi
 from readarr.api.update_log_file_api import UpdateLogFileApi
 
+""",
+            name=__name__,
+            doc=__doc__,
+        )
+    )
