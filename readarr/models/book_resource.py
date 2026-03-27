@@ -29,6 +29,7 @@ from readarr.models.media_cover import MediaCover
 from readarr.models.ratings import Ratings
 from typing import Optional, Set
 from typing_extensions import Self
+from pydantic_core import to_jsonable_python
 
 class BookResource(BaseModel):
     """
@@ -61,7 +62,8 @@ class BookResource(BaseModel):
     __properties: ClassVar[List[str]] = ["id", "title", "authorTitle", "seriesTitle", "disambiguation", "overview", "authorId", "foreignBookId", "foreignEditionId", "titleSlug", "monitored", "anyEditionOk", "ratings", "releaseDate", "pageCount", "genres", "author", "images", "links", "statistics", "added", "addOptions", "remoteCover", "editions"]
 
     model_config = ConfigDict(
-        populate_by_name=True,
+        validate_by_name=True,
+        validate_by_alias=True,
         validate_assignment=True,
         protected_namespaces=(),
     )
@@ -73,8 +75,7 @@ class BookResource(BaseModel):
 
     def to_json(self) -> str:
         """Returns the JSON representation of the model using alias"""
-        # TODO: pydantic v2: use .model_dump_json(by_alias=True, exclude_unset=True) instead
-        return json.dumps(self.to_dict())
+        return json.dumps(to_jsonable_python(self.to_dict()))
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
