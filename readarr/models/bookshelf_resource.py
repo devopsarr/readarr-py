@@ -78,8 +78,7 @@ class BookshelfResource(BaseModel):
         _items = []
         if self.authors:
             for _item_authors in self.authors:
-                if _item_authors:
-                    _items.append(_item_authors.to_dict())
+                _items.append(_item_authors.to_dict() if _item_authors is not None else None)
             _dict['authors'] = _items
         # override the default output from pydantic by calling `to_dict()` of monitoring_options
         if self.monitoring_options:

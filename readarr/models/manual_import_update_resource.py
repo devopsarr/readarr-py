@@ -91,8 +91,7 @@ class ManualImportUpdateResource(BaseModel):
         _items = []
         if self.rejections:
             for _item_rejections in self.rejections:
-                if _item_rejections:
-                    _items.append(_item_rejections.to_dict())
+                _items.append(_item_rejections.to_dict() if _item_rejections is not None else None)
             _dict['rejections'] = _items
         # set to None if path (nullable) is None
         # and model_fields_set contains the field
