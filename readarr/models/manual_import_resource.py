@@ -103,8 +103,7 @@ class ManualImportResource(BaseModel):
         _items = []
         if self.rejections:
             for _item_rejections in self.rejections:
-                if _item_rejections:
-                    _items.append(_item_rejections.to_dict())
+                _items.append(_item_rejections.to_dict() if _item_rejections is not None else None)
             _dict['rejections'] = _items
         # override the default output from pydantic by calling `to_dict()` of audio_tags
         if self.audio_tags:

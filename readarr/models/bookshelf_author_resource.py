@@ -76,8 +76,7 @@ class BookshelfAuthorResource(BaseModel):
         _items = []
         if self.books:
             for _item_books in self.books:
-                if _item_books:
-                    _items.append(_item_books.to_dict())
+                _items.append(_item_books.to_dict() if _item_books is not None else None)
             _dict['books'] = _items
         # set to None if monitored (nullable) is None
         # and model_fields_set contains the field

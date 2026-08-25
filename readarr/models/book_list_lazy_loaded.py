@@ -78,8 +78,7 @@ class BookListLazyLoaded(BaseModel):
         _items = []
         if self.value:
             for _item_value in self.value:
-                if _item_value:
-                    _items.append(_item_value.to_dict())
+                _items.append(_item_value.to_dict() if _item_value is not None else None)
             _dict['value'] = _items
         # set to None if value (nullable) is None
         # and model_fields_set contains the field
