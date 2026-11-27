@@ -1,5 +1,26 @@
 # Changelog
 
+## 1.2.1 (2026-11-27)
+
+## What's Changed
+* fix(deps): update openapitools/openapi-generator-cli docker tag to v7.16.0 by @devopsarr[bot] in https://github.com/devopsarr/readarr-py/pull/54
+* fix(deps): update openapitools/openapi-generator-cli docker tag to v7.18.0 by @devopsarr[bot] in https://github.com/devopsarr/readarr-py/pull/57
+* fix(deps): update openapitools/openapi-generator-cli docker tag to v7.19.0 by @devopsarr[bot] in https://github.com/devopsarr/readarr-py/pull/58
+* fix(deps): update openapitools/openapi-generator-cli docker tag to v7.20.0 by @devopsarr[bot] in https://github.com/devopsarr/readarr-py/pull/59
+* chore: add files for relase please v4 migration by @devopsarr[bot] in https://github.com/devopsarr/readarr-py/pull/60
+* fix(deps): update openapitools/openapi-generator-cli docker tag to v7.21.0 by @devopsarr[bot] in https://github.com/devopsarr/readarr-py/pull/61
+* fix(deps): update openapitools/openapi-generator-cli docker tag to v7.22.0 by @devopsarr[bot] in https://github.com/devopsarr/readarr-py/pull/62
+* fix(deps): update openapitools/openapi-generator-cli docker tag to v7.23.0 by @devopsarr[bot] in https://github.com/devopsarr/readarr-py/pull/63
+* fix(deps): update openapitools/openapi-generator-cli docker tag to v7.24.0 by @devopsarr[bot] in https://github.com/devopsarr/readarr-py/pull/64
+* fix(deps): update openapitools/openapi-generator-cli docker tag to v7.25.0 by @devopsarr[bot] in https://github.com/devopsarr/readarr-py/pull/65
+* fix(deps): update openapitools/openapi-generator-cli docker tag to v7.26.0 by @devopsarr[bot] in https://github.com/devopsarr/readarr-py/pull/66
+* fix(deps): update openapitools/openapi-generator-cli docker tag to v7.27.0 by @devopsarr[bot] in https://github.com/devopsarr/readarr-py/pull/67
+* chore: edit changelog type to github by @devopsarr[bot] in https://github.com/devopsarr/readarr-py/pull/68
+* fix(deps): update openapitools/openapi-generator-cli docker tag to v7.28.0 by @devopsarr[bot] in https://github.com/devopsarr/readarr-py/pull/69
+
+
+**Full Changelog**: https://github.com/devopsarr/readarr-py/compare/v1.2.0...v1.2.1
+
 ## [1.2.0](https://github.com/devopsarr/readarr-py/compare/v1.1.0...v1.2.0) (2025-09-02)
 
 
